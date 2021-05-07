@@ -7,7 +7,8 @@ import Home from './components/Home';
 import Search from './components/Search';
 import Register from './components/Register';
 import MyCal from './components/MyCal';
-
+import EventCalendar from './components/EventsCal'
+        
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/Search' component={Search} />
       <Route exact path='/Register' component={Register} />
       <Route exact path='/MyCal' component={MyCal} />
+      <EventCalendar />
       <Footer />
     </HashRouter>
   );

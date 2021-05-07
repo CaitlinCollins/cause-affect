@@ -20,17 +20,18 @@
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
-  },
+  "devDependencies": {"concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"},
   "bugs": {
     "url": "https://github.com/CaitlinCollins/cause-affect/issues"
   },
   "homepage": "https://github.com/CaitlinCollins/cause-affect#readme",
   "dependencies": {
+    "@fullcalendar/daygrid": "^5.6.0",
+    "@fullcalendar/react": "^5.6.0",
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "fullcalendar": "^5.6.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.12.7"
   }
