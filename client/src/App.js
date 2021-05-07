@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Search from './components/Search';
 import Register from './components/Register';
 import MyCal from './components/MyCal';
-import './App.css';
+
 
 function App() {
   return (
