@@ -1,8 +1,17 @@
 import React from "react";
+import EventCalendar from '../EventsCal';
+import SearchBtns from "../SearchBtns";
+import Featured from "../Featured";
 import { Container, Row, Col } from "../Grid";
 
 function Home() {
-    return <h1>I am a the home page! </h1>
+    return (
+        <Container>
+            <Featured />
+            <SearchBtns />
+            <EventCalendar /> 
+        </Container>
+    )
 
 }
 
