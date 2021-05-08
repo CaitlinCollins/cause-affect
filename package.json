@@ -12,7 +12,8 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "seed": "node scripts/seedDB.js"
+    "seed": "cd scripts && node seedOrg.js && node seedUser.js"
+  
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {"concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"},
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
   "bugs": {
     "url": "https://github.com/CaitlinCollins/cause-affect/issues"
   },
@@ -33,6 +36,8 @@
     "express": "^4.17.1",
     "fullcalendar": "^5.6.0",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.7"
+    "mongoose": "^5.12.7",
+    "mongoose-bcrypt": "^1.9.0",
+    "validator": "^13.6.0"
   }
 }

@@ -1,4 +1,5 @@
 module.exports = {
-    Organization: require("./organization")
+    Organization: require("./Organization"),
+    User: require("./User")
   };
   
