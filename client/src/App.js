@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Search from './components/Search';
 import Register from './components/Register';
 import MyCal from './components/MyCal';
+import Login from './components/Login';
         
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/Search' component={Search} />
       <Route exact path='/Register' component={Register} />
       <Route exact path='/MyCal' component={MyCal} />
+      <Route exact path='/Login' component={Login} />
       <Footer />
     </HashRouter>
   );
