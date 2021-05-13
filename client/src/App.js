@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { HashRouter } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Search from './components/Search';
-import Register from './components/Register';
-import MyCal from './components/MyCal';
+import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
+import Home from './components/Home/home';
+import Search from './components/Search/search';
+import Register from './components/Register/register';
+import MyCal from './components/MyCal/myCal';
         
 
 function App() {

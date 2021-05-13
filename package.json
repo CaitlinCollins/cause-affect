@@ -13,7 +13,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
     "seed": "cd scripts && node seedOrg.js && node seedUser.js"
-  
   },
   "repository": {
     "type": "git",
@@ -38,6 +37,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.12.7",
     "mongoose-bcrypt": "^1.9.0",
+    "node-sass": "^6.0.0",
     "validator": "^13.6.0"
   }
 }
