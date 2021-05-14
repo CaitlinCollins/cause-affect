@@ -17,6 +17,7 @@ function App() {
       <Route exact path='/Search' component={Search} />
       <Route exact path='/Register' component={Register} />
       <Route exact path='/MyCal' component={MyCal} />
+      <Route exact path='/Login' component={Login} />
       <Footer />
     </HashRouter>
   );

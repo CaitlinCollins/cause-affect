@@ -1,0 +1,29 @@
+.login-form {
+    width: 80%;
+    height: auto;
+    margin: 40px 0px 100px 0px;
+    display: inline-block;
+    color: #080808;
+    padding: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: rgb(247, 247, 245);
+}
+
+.loginInput {
+    margin: 10px;
+}
+
+.inputLogin {
+    width: 252px;
+    float: right;
+} 
+
+.loginBtn {
+    background-color:hsl(180, 9%, 59%) !important;
+    width: 252px;
+    float: right;
+    margin-right: 10px;
+    font-weight: bold;
+}

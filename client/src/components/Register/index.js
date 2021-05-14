@@ -2,14 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "../Grid";
 import "./style.css";
 
-function Login() {
+function Register() {
 return(
     <Container> 
 <Row>
   <Col size="md-12">
     <div className="login-form">
-      <h2 className="page-title">Login</h2>
-      <form className="form">
+      <h2 className="page-title">Register</h2>
+      <form className="form ">
+      <div className="form-group loginInput">
+          <label for="username-login">Username:</label>
+          <input className="form-input inputLogin" type="text" id="username-login" />
+        </div>
         <div className="form-group loginInput">
           <label for="email-login">Email:</label>
           <input className="form-input inputLogin" type="text" id="email-login" />
@@ -31,4 +35,4 @@ return(
 
 }
 
-export default Login;
+export default Register;
