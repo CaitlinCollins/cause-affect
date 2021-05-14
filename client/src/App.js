@@ -7,6 +7,7 @@ import Home from './components/Home/home';
 import Search from './components/Search/search';
 import Register from './components/Register/register';
 import MyCal from './components/MyCal/myCal';
+import Login from './components/Login/login';
         
 
 function App() {
