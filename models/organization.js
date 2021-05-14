@@ -11,3 +11,5 @@ const orgSchema = new Schema({
 const Organization = mongoose.model("Organization", orgSchema);
 
 module.exports = Organization;
+
+//organizations creating events. events belong to organization
