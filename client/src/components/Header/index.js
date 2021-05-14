@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid/grid";
+import { Container, Row, Col } from "../Grid";
+import "./style.css";
 
 function Header() {
 return (
@@ -7,14 +8,10 @@ return (
         <Row>
             <Col size="xs-4">
                 <h1 className="header">cause<span className="and">&</span>affect</h1>
-                <form className="city">
+                <form className="zip">
                     <input
-                    className="citySearch"
-                    placeholder="Enter City"
-                    />
-                    <input
-                    className="stateSearch"
-                    placeholder="Enter State"
+                    className="zipSearch"
+                    placeholder="Enter Zipcode to Search Locally"
                     />
                     <button className="searchBtn">Search!</button>
                 </form>
