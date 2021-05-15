@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Result = ({ cause }) => {
+const Result = ({ charity }) => {
     return (
         <div>
             <div>
                 <h1>
                     <a 
-                    href={cause.websiteURL} target="_blank"> {cause.charityName}</a>
+                    href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
                 </h1>
-                <h3>{cause.mission}</h3>
+                <p>{charity.mission}</p>
             </div>
         </div>
     )
