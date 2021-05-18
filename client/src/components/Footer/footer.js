@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
+import "./footer.scss";
 
 function Footer() {
     return (
-        <p>cause&effect © Copyright 2021</p>
+        <footer>
+            <p>cause&effect © copyright 2021</p>
+        </footer>
     )
 
 }
