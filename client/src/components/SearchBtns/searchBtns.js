@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 function SearchBtns() {
  return (
     <div>
-        <button className="searchOpBtn">
+        <button className="btn-info" id="searchop-btn">
             <Link to="/Search">Search Volunteer Oppotunities
             </Link>
         </button>
-        <button className="registerOrgBtn">Register My Organization</button>
-        <button className="myCalBtn">My Event Calendar</button>
+        <button className="btn-info" id="register-btn">Register My Organization</button>
+        <button className="btn-info" id="mycal-btn">My Event Calendar</button>
     </div>
  )
 }

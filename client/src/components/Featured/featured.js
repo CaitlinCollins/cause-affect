@@ -1,23 +1,24 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
+import "./featured.scss";
 
 function Featured() {
     return (
-        <div>
+        <div className="card" id="featured-background">
             <h2>Featured Local Organization: My Organization</h2>
-            <img 
+            <img id="org-photo"
                 alt="Organization Photo"
-                src="/assets/redcross.png"
+                src="/assets/cause.jpeg"
             ></img>
-            <ul>
-                <li>Details: These are details!</li>
-                <li>Website: <a href="#">www.mywebsite.com</a></li>
-                <li>Date: Today!</li>
-                <li>Time: Now!</li>
-                <li>Volunteers Needed: 10000</li>
+            <ul id="details">
+                <p>Details: These are details!</p>
+                <p>Website: <a href="#" target="_blank" id="website">www.mywebsite.com</a></p>
+                <p>Date: Today!</p>
+                <p>Time: Now!</p>
+                <p>Volunteers Needed: 10000</p>
             </ul>
-            <button>Volunteer Now!</button>
-            <button>Make a Donation!</button>
+            <button id="volunteer-btn">Volunteer Now!</button>
+            <button id="donate-btn">Make a Donation!</button>
         </div>
     )
 }
