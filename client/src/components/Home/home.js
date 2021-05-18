@@ -1,18 +1,17 @@
 import React from "react";
 import EventCalendar from '../EventsCal/eventsCal';
-import SearchBtns from "../SearchBtns/searchBtns";
 import Featured from "../Featured/featured";
+// import Header from "../Header/header";
+// import Footer from "../Footer/footer";
 import { Container, Row, Col } from "../Grid/grid";
+import "./home.scss";
 
 function Home() {
     return (
         <Container>
             <Row>
-                <Col size="md-9">
+                <Col size="md-12">
                     <Featured />
-                </Col>
-                <Col size="md-3">
-                    <SearchBtns />
                 </Col>
             </Row>
             <Row>

@@ -8,17 +8,18 @@ import Search from './components/Search/search';
 import Register from './components/Register/register';
 import MyCal from './components/MyCal/myCal';
 import Login from './components/Login/login';
+import './App.scss';
         
 
 function App() {
   return (
     <HashRouter>
       <Header />
-      <Route exact path={["/", "/Home"]} component={Home} />
-      <Route exact path='/Search' component={Search} />
-      <Route exact path='/Register' component={Register} />
-      <Route exact path='/MyCal' component={MyCal} />
-      <Route exact path='/Login' component={Login} />
+        <Route exact path={["/", "/Home"]} component={Home} />
+        <Route exact path='/Search' component={Search} />
+        <Route exact path='/Register' component={Register} />
+        <Route exact path='/MyCal' component={MyCal} />
+        <Route exact path='/Login' component={Login} />
       <Footer />
     </HashRouter>
   );
