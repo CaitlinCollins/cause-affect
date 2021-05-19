@@ -40,7 +40,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.12.7",
     "mongoose-bcrypt": "^1.9.0",
-    "node-sass": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.13",
     "validator": "^13.6.0"
   }
 }

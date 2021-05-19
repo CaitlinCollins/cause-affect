@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
-import RegisterBtn from "../registerBtn";
+import API from "../../utils/API";
+// import RegisterContext from "../../utils/registerContext";
+import RegisterBtn from "../RegisterBtn";
 
 function Register() {
+  const [user, setUser] = useState([]);
+  const [formObject, setFormObject] = useState({});
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormObject({ ...formObject, [name]: value });
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formObject.username && formObject.email && formObject.password) {
+      API.registerUser({
+        username: formObject.username,
+        email: formObject.email,
+        password: formObject.password,
+      })
+        .then((res) => setUser(res.data))
+        .catch((err) => console.log(err));
+    }
+  }
+
   return (
     <Container>
       <Row>
@@ -16,7 +39,7 @@ function Register() {
                   className="form-input inputLogin"
                   type="text"
                   id="username-login"
-                  // registerContext.username={target.value}
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="form-group loginInput">
@@ -25,6 +48,7 @@ function Register() {
                   className="form-input inputLogin"
                   type="text"
                   id="email-login"
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="form-group loginInput">
@@ -33,10 +57,15 @@ function Register() {
                   className="form-input inputLogin"
                   type="password"
                   id="password-login"
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="form-group">
-              <RegisterBtn/>
+                
+                <RegisterBtn
+                 disabled={!(formObject.username && formObject.email && formObject.password)}
+                 onClick={handleFormSubmit}
+                >Register</RegisterBtn>
               </div>
             </form>
           </div>

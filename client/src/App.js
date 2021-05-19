@@ -8,7 +8,7 @@ import Search from './components/Search/search';
 import Register from './components/Register/register';
 import MyCal from './components/MyCal/myCal';
 import Login from './components/Login/login';
-import './App.scss';
+// import './App.scss';
         
 
 function App() {
