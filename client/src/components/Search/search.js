@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
 import SearchResults from "../SearchResults/searchResults";
-import "./search.scss";
+// import "./search.scss";
 
 
 function Search() {

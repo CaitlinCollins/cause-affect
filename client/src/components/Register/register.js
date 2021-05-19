@@ -21,7 +21,7 @@ function Register() {
         email: formObject.email,
         password: formObject.password,
       })
-        .then((res) => setUser(res.data))
+        .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
   }
@@ -39,6 +39,7 @@ function Register() {
                   className="form-input inputLogin"
                   type="text"
                   id="username-login"
+                  name="username"
                   onChange={handleInputChange}
                 />
               </div>
@@ -48,6 +49,7 @@ function Register() {
                   className="form-input inputLogin"
                   type="text"
                   id="email-login"
+                  name="email"
                   onChange={handleInputChange}
                 />
               </div>
@@ -57,6 +59,7 @@ function Register() {
                   className="form-input inputLogin"
                   type="password"
                   id="password-login"
+                  name="password"
                   onChange={handleInputChange}
                 />
               </div>
