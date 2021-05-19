@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
+import SearchResults from "../SearchResults/searchResults";
 import "./search.scss";
 
 
@@ -91,6 +92,13 @@ function Search() {
             </Col>
             <Col size="md-4 sm-0">
             </Col>
+            </Row>
+            <Row>
+                <Col size="md-12">
+                    <div className="text-center">
+                        <SearchResults />
+                    </div>
+                </Col>
             </Row>
         </div>
     )

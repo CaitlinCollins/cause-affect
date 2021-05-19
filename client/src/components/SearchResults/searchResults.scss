@@ -1,0 +1,31 @@
+#org-details {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: grey;
+}
+
+#search-results-div {
+    max-width: 340px;
+    margin: 40px 10px;
+    display:inline-block;
+}
+#org-name {
+    font-size: 18px;
+}
+#org-img {
+   max-width: 300px; 
+   max-height: auto;
+   opacity: 60%;
+}
+
+#org-volunteer, #org-donate {
+    width: 120px;
+    font-size: 14px;
+    margin-left: 1%;
+    margin-bottom: 20px !important;
+    background-color: grey !important;
+    color:rgb(247, 231, 231) !important;
+    font-family: 'Montserrat', sans-serif;
+}
