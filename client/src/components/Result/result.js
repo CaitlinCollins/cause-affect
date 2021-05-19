@@ -1,9 +1,17 @@
-import React from "react";
-import { Container, Row, Col } from "../Grid";
+import React from 'react';
 
-function Result() {
-
-
+const Result = ({ charity }) => {
+    return (
+        <div>
+            <div>
+                <h1>
+                    <a 
+                    href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
+                </h1>
+                <p>{charity.mission}</p>
+            </div>
+        </div>
+    )
 }
 
 export default Result;
