@@ -63,7 +63,7 @@ function Register() {
               <div className="form-group">
                 
                 <RegisterBtn
-                 disabled={!(formObject.username && formObject.email && formObject.password)}
+                //  disabled={!(formObject.username && formObject.email && formObject.password)}
                  onClick={handleFormSubmit}
                 >Register</RegisterBtn>
               </div>
