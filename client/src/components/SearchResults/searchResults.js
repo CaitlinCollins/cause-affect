@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'
-import Result from '../Result';
+import Result from '../Result/result';
 
 const SearchResults = ({ city, state, cause }) => {
 
