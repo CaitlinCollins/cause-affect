@@ -10,10 +10,10 @@ return (
         <Col size="md-12">
             <header>
             <Row>
-                <Col size="md-8">
+                <Col size="md-4">
                 <h1 className="header">cause<span className="and">&</span>affect</h1>
                 </Col>
-                <Col size="md-4">
+                <Col size="md-8">
                 <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                     <button

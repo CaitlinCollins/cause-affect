@@ -57,8 +57,10 @@ const SearchResults = ({ city, state, cause }) => {
               <p>Time: Now!</p>
               <p>Volunteers Needed: 10000</p>
           </ul>
-          <button id="org-volunteer">Volunteer Now!</button>
-          <button id="org-donate">Make a Donation!</button>
+          <div className="btn-center">
+            <button id="org-volunteer">Volunteer Now!</button>
+            <button id="org-donate">Make a Donation!</button>
+          </div>
   </div>
   <div id="search-results-div" className="card text-center">
   <h2 id="org-name">My Organization</h2>

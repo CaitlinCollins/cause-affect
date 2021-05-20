@@ -96,7 +96,7 @@ h2 {
 #volunteer-btn, #donate-btn {
   width: 200px;
   height: 60px;
-  margin-left: 42%;
+  margin: .5%;
   margin-bottom: 20px !important;
   background-color: $grey !important;
   color: $lightPink !important;
@@ -105,6 +105,10 @@ h2 {
   box-shadow: $boxShadow;
   border: none !important;
  
+}
+
+.btn-center {
+  text-align: center;
 }
 
 // Footer
@@ -238,7 +242,7 @@ span {
   height: 50px;
   display: inline-block;
   font-size: 14px;
-  margin-left: 1%;
+  margin: 0 .5%;
   margin-bottom: 20px !important;
   background-color: $grey !important;
   color: $white !important;
@@ -248,3 +252,21 @@ span {
 }
 
 
+// Media Queries
+@media only screen and (max-width: 991px) {
+	nav {
+    background-color: transparent !important;
+  }
+
+  .nav-link {
+    margin-top: 10px;
+    padding: 2px !important;
+    font-size: 14px;
+    background-color: $lightBlue !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+
+}
