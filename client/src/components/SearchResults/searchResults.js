@@ -42,6 +42,7 @@ const SearchResults = ({ city, state, cause }) => {
           <Result charity={item} />
         ))}
       </div>
+
     )
 }
 

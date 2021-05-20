@@ -1,13 +1,14 @@
 import { isPropsValid } from "@fullcalendar/common";
 import React from "react";
-import { Container, Row, Col } from "../Grid/grid";
+import "./causes.scss";
+import AwIcon from "awicons-react";
 
 
 function Causes(props){
     return (
-        <button className="btn-primary">
-            <p>{props.title}</p>
-            <p>{props.img}</p>
+        <button id="cause-btn">
+            <p id="cause-title">{props.title}</p>
+            <AwIcon id="cause-image" className="icon" iconName={props.img}/>
 
         </button>
  )
