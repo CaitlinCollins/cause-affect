@@ -24,7 +24,7 @@ const SearchResults = ({ city, state, cause }) => {
 
     }, [])
 
-    console.log(items)
+    
 
     if (error) return (
       <div className="error">
@@ -35,6 +35,7 @@ const SearchResults = ({ city, state, cause }) => {
     )
     
     if (!items) {
+      console.log(cause);
       return (
         <div>Loading...</div>
       )
@@ -48,7 +49,7 @@ const SearchResults = ({ city, state, cause }) => {
           <Result charity = { item } />
         ))} 
       </div>
-    )
-}
+    )}
+
 
 export default SearchResults;
