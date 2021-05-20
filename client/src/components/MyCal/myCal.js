@@ -1,9 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid/grid";
+import EventsCal from "../EventsCal/eventsCal";
 
 function MyCal() {
-return (<h1>This is MyCal</h1>)
-
+return (
+    <EventsCal />
+    )
 }
 
 export default MyCal;

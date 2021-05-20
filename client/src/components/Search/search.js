@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
+
 import SearchFunction from "./index.js"
 import "./search.scss";
 
@@ -9,11 +10,14 @@ function Search() {
     
     return (
         <div>
+
            
             <SearchFunction />
        
 
             
+
+          
         </div>
         
     )
