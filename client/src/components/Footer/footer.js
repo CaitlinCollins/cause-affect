@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
-import "./footer.scss";
+import "../../App.scss";
 
 function Footer() {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./featured.scss";
+import "../../App.scss";
 
 function Featured() {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
-import "./style.css";
+import "../../App.scss";
 
 function Login() {
 return(

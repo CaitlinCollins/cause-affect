@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
 import SearchResults from "../SearchResults/searchResults";
-import "./search.scss";
+import "../../App.scss";
 
 
 function Search() {
@@ -75,9 +75,9 @@ function Search() {
                 </Col>
             </Row>
             <Row>
-            <Col size="md-4 sm-0">
+            <Col size="lg-4 md-2 sm-0">
             </Col>
-            <Col size="md-4 sm-12">
+            <Col size="lg-4 md-8 sm-12">
                 <div className="text-center">
                     {causesArray.map(cause => {
                         return (
@@ -90,7 +90,7 @@ function Search() {
                 
                 </div>
             </Col>
-            <Col size="md-4 sm-0">
+            <Col size="lg-4 md-2 sm-0">
             </Col>
             </Row>
             <Row>

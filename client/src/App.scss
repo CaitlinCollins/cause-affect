@@ -1,7 +1,250 @@
 /* @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css'; */
 
+$lightBlue: rgb(229, 238, 247);
+$lightPink: rgb(247, 231, 231);
+$grey: grey;
+$darkgrey: rgb(71, 70, 70);
+$white: white;
+$blue: rgb(72, 157, 255);
+$shadow1:  rgba(0, 0, 0, 0.2);
+$shadow2: rgba(0, 0, 0, 0.19);
+$pink: rgb(235, 143, 143);
+
+$mainFont: 'Montserrat', sans-serif;
+$fancyFont: 'Special Elite', cursive;
+
+$boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
+
+// App
 #root {
-  background-color: rgb(229, 238, 247);
+  background-color: $lightBlue;
   width: 100%;
  }
+
+// Causes
+ #cause-btn {
+  height: 120px;
+  width: 120px;
+  margin: 5px;
+  padding: 5px;  
+  background-color: $lightPink !important;
+  box-shadow: $boxShadow;
+  border: none !important;
+}
+
+#cause-title {
+  font-family: $mainFont;
+  color: $grey;
+  font-size: 13px;
+}
+
+.icon {
+  color: $blue;
+  font-size: 30px;
+}
+
+// EventsCal
+#calendar {
+  margin: 5px !important;
+
+}
+
+h2.fc-toolbar-title {
+  font-size: 20px !important;
+}
+
+// Featured
+.card {
+  box-shadow: $boxShadow;
+  position: relative;
+  padding: 20px;
+}
+
+h2 {
+  font-family: $mainFont;
+  text-align: center;
+  padding: 20px;
+  color: $grey;
+}
+
+#featured-background {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  background-color: $lightPink;
+}
+
+#org-photo {
+  max-width: 100%;
+  opacity: 60%;
+  box-shadow: $boxShadow;
+}
+
+#details {
+  font-family: $mainFont;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  color: $grey;
+}
+
+#website {
+  text-decoration: none;
+  color: $blue;
+}
+
+#volunteer-btn, #donate-btn {
+  width: 200px;
+  height: 60px;
+  margin-left: 42%;
+  margin-bottom: 20px !important;
+  background-color: $grey !important;
+  color: $lightPink !important;
+  font-family: $mainFont;
+  font-size: 18px;
+  box-shadow: $boxShadow;
+  border: none !important;
+ 
+}
+
+// Footer
+
+footer {
+  margin-top: 20px;
+  height: 40px;
+  font-family: $fancyFont;
+  padding: 10px;
+  text-align: center;
+  color: $white;
+  background-color: $grey;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+// Header
+header {
+  max-width: 100%;
+  height: 330px;
+  background-image: url("./components/Header/handslink.jpg");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 {
+  font-size: 32px !important;
+  font-family: $fancyFont;
+  margin-left: 4%;
+  color: $darkgrey;
+
+}
+nav {
+  float: right;
+  height: 40px !important;
+  padding: 0px;
+  background-color: $lightBlue !important;
+}
+
+.nav-link{
+  font-family: $mainFont;
+  color: $grey !important;
+  font-size: 16px;
+  padding-left: 6px !important;
+  padding-right: 0px !important;
+} 
+
+
+span {
+  font-size: 48px;
+  padding: 2px;
+  color: $pink;
+}
+
+// Login
+
+.login-form {
+  width: 80%;
+  height: auto;
+  margin: 40px 0px 100px 0px;
+  display: inline-block;
+  color: $darkgrey;
+  padding: 20px;
+  font-family: $mainFont;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: $lightPink;
+}
+
+.loginInput {
+  margin: 10px;
+}
+
+.inputLogin {
+  width: 252px;
+  float: right;
+} 
+
+.loginBtn {
+  background-color: $grey !important;
+  width: 252px;
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+// Search 
+#search-btn {
+  background-color: $lightPink !important;
+  color: $blue;
+  font-family: $mainFont;
+  width: 80px;
+  height: 28px;
+  box-shadow: $boxShadow;
+  border-color: $white !important;
+}
+
+#city-name, #state-name {
+   margin-right: 5px;
+   font-family: $mainFont;
+}
+
+// SearchResults
+#org-details {
+  font-family: $mainFont;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  color: $grey;
+}
+
+#search-results-div {
+  max-width: 340px;
+  margin: 40px 10px;
+  display:inline-block;
+}
+#org-name {
+  font-size: 18px;
+}
+#org-img {
+ max-width: 300px; 
+ max-height: auto;
+ opacity: 60%;
+ box-shadow: $boxShadow;
+}
+
+#org-volunteer, #org-donate {
+  width: 110px;
+  height: 50px;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 1%;
+  margin-bottom: 20px !important;
+  background-color: $grey !important;
+  color: $white !important;
+  font-family: $mainFont;
+  box-shadow: $boxShadow;
+  border: none !important;
+}
+
+
