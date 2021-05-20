@@ -1,0 +1,28 @@
+
+
+#select-causes input[type="radio"] {
+    display: none;
+  }
+
+#select-causes {
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+    padding: 5px;  
+    background-color:rgb(247, 231, 231) !important;
+}
+
+#select-causes input[type="radio"]:checked + span {
+    background-color: darkgoldenrod;
+    color: black;
+}
+
+.cause-title {
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+    font-size: 13px;
+}
+
+.icon {
+    color: rgb(72, 157, 255);
+}

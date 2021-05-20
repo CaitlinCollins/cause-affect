@@ -2,7 +2,7 @@
   "name": "cause-affect",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.1.10",
     "awicons-react": "^1.1.1",
     "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.0.0",
     "jquery": "^3.6.0",
     "node-sass": "^5.0.0",
