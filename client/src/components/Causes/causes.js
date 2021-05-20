@@ -1,6 +1,6 @@
 import { isPropsValid } from "@fullcalendar/common";
 import React from "react";
-import "./causes.scss";
+import "../../App.scss";
 import AwIcon from "awicons-react";
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import Result from '../Result/result';
+import "../../App.scss";
 
 const SearchResults = ({ city, state, cause }) => {
 
@@ -41,7 +42,7 @@ const SearchResults = ({ city, state, cause }) => {
       )
     }
     return (
-      <div className="index">
+       <div className="index">
         <h1>
           there are {items.length} that match your input:
         </h1>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./featured.scss";
+import "../../App.scss";
 
 function Featured() {
     return (
@@ -16,8 +16,10 @@ function Featured() {
                 <p>Time: Now!</p>
                 <p>Volunteers Needed: 10000</p>
             </ul>
+            <div className="btn-center">
             <button id="volunteer-btn">Volunteer Now!</button>
             <button id="donate-btn">Make a Donation!</button>
+            </div>
         </div>
     )
 }

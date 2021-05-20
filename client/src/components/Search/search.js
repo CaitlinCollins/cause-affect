@@ -3,7 +3,7 @@ import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
 
 import SearchFunction from "./index.js"
-import "./search.scss";
+import "../../App.scss";
 
 
 function Search() {
@@ -16,7 +16,7 @@ function Search() {
        
 
             
-
+\\\
           
         </div>
         

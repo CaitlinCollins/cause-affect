@@ -4,7 +4,6 @@ import Featured from "../Featured/featured";
 // import Header from "../Header/header";
 // import Footer from "../Footer/footer";
 import { Container, Row, Col } from "../Grid/grid";
-import "./home.scss";
 
 function Home() {
     return (
