@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import Causes from "../Causes/causes";
+import SearchFunction from "./index.js"
+import UserInput from "../UserInput"
 import "./search.scss";
 
 
@@ -92,7 +94,9 @@ function Search() {
             <Col size="md-4 sm-0">
             </Col>
             </Row>
+            <SearchFunction />
         </div>
+        
     )
 }
 

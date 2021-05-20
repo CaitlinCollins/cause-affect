@@ -1,9 +1,9 @@
 import React from "react";
-const UserInput = ( handleSubmit ) => {
+const UserInput = ({ handleSubmit }) => {
 
     const [city, setCity] = React.useState("")
     const [state, setState] = React.useState("")
-    const [cause, setCause] = React.useState("0")
+    const [cause, setCause] = React.useState("")
 
     const sendData = (event) => {
         event.preventDefault()
@@ -12,7 +12,8 @@ const UserInput = ( handleSubmit ) => {
             city,
             state: state.toUpperCase()
         }
-        handleSubmit('userInput', data)
+
+        handleSubmit(data);
         
     }
 
@@ -39,5 +40,4 @@ const UserInput = ( handleSubmit ) => {
     </div>
 )
 }
-
 export default UserInput;
