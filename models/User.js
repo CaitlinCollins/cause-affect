@@ -1,4 +1,3 @@
-// username, password, organizations, events, donations
 const validator = require("validator");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;

@@ -12,7 +12,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "seed": "cd scripts && node seedOrg.js && node seedUser.js"
+    "seed": "cd scripts && node seedOrg.js && node seedUser.js && node seedEvent.js && seedAdmin.js"
   },
   "repository": {
     "type": "git",
