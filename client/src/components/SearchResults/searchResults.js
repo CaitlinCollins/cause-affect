@@ -1,22 +1,21 @@
 import React from 'react';
 import axios from 'axios'
-import Result from '../Result';
+import Result from '../Result/result';
 
 const SearchResults = ({ city, state, cause }) => {
 
-    const [items, setItems] = React.useState();
+    const [items, setItems] = React.useState(null);
     const [error, setError] = React.useState();
 
     
     React.useEffect( () => {
-        axios.get(`/call`, { 
-            params: {
+        axios.post(`/charityApi`, {  
             city,
             state,
             cause
-          }
         })
           .then(res => {
+            console.log(res);
             return setItems(res.data);
           })
           .catch(err => {
@@ -25,6 +24,8 @@ const SearchResults = ({ city, state, cause }) => {
 
     }, [])
 
+    
+
     if (error) return (
       <div className="error">
         <h1>{error}</h1>
@@ -32,18 +33,26 @@ const SearchResults = ({ city, state, cause }) => {
         </p>
       </div>
     )
-
+    
+    if (!items) {
+      console.log(cause);
+      return (
+        <div>Loading...</div>
+      )
+    }
     return (
       <div className="index">
         <h1>
           there are {items.length} that match your input:
         </h1>
-        {items.map(item => (
-          <Result charity={item} />
-        ))}
+         {items.map(item => (
+          <Result charity = { item } />
+        ))} 
       </div>
+
 
     )
 }
+
 
 export default SearchResults;
