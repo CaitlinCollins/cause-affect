@@ -9,6 +9,7 @@ import Register from './components/Register/register';
 import MyCal from './components/MyCal/myCal';
 import Login from './components/Login/login';
 import './App.scss';
+import Events from './components/Events';
         
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/Register' component={Register} />
         <Route exact path='/MyCal' component={MyCal} />
         <Route exact path='/Login' component={Login} />
+        <Route exact path='/Events' component={Events} />
       <Footer />
     </HashRouter>
   );
