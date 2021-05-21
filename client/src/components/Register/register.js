@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
-// import RegisterContext from "../../utils/registerContext";
 import RegisterBtn from "../RegisterBtn";
 
 function Register() {
@@ -66,7 +65,7 @@ function Register() {
               <div className="form-group">
                 
                 <RegisterBtn
-                //  disabled={!(formObject.username && formObject.email && formObject.password)}
+                 disabled={!(formObject.username && formObject.email && formObject.password)}
                  onClick={handleFormSubmit}
                 >Register</RegisterBtn>
               </div>
