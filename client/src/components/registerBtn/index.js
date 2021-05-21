@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
-import RegisterContext from "../../utils/registerContext";
+import React from "react";
+// import RegisterContext from "../../utils/registerContext";
 
-function RegisterBtn(props){
-    const { handleBtnClick } = useContext(RegisterContext);
-    return(
-        <button onClick={handleBtnClick}
-        className={`btn loginBtn ${props["data-value"]}`}{...props}>Register</button>
+export function RegisterBtn(props) {
+    return (
+      <button {...props} className="btn loginBtn">
+        {props.children}
+      </button>
     );
-}
+  }
 
 export default RegisterBtn;
+
