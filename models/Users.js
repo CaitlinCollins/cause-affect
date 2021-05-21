@@ -7,7 +7,7 @@ const userSchema = new Schema({
   username: { type: String, 
     trim: true, 
     required: "Username is Required",
-    uniqueKey: true
+    
   },
   password: {
     type: String,
@@ -31,8 +31,8 @@ const userSchema = new Schema({
 });
 
 
-const User = mongoose.model("User", userSchema);
+const Users = mongoose.model("Users", userSchema);
 
-module.exports = User;
+module.exports = Users;
 
 //user array of events like and volunteer for pulling user record adding events

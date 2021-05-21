@@ -12,7 +12,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "seed": "cd scripts && node seedOrg.js && node seedUser.js && node seedEvent.js && seedAdmin.js"
+    "seed": "cd scripts && node seedOrg.js && node seedUsers.js && node seedEvent.js && node seedAdmin.js"
   },
   "repository": {
     "type": "git",
@@ -32,10 +32,10 @@
     "@fullcalendar/daygrid": "^5.6.0",
     "@fullcalendar/react": "^5.6.0",
     "axios": "^0.21.1",
-    "dotenv": "^9.0.2",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "fullcalendar": "^5.6.0",
     "if-env": "^1.0.4",
