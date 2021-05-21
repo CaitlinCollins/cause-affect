@@ -23,25 +23,56 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
  }
 
 // Causes
- #cause-btn {
-  height: 120px;
-  width: 120px;
-  margin: 5px;
-  padding: 5px;  
-  background-color: $lightPink !important;
-  box-shadow: $boxShadow;
-  border: none !important;
-}
 
-#cause-title {
+.cause-title {
   font-family: $mainFont;
   color: $grey;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .icon {
   color: $blue;
-  font-size: 30px;
+  font-size: 35px;
+  padding: 5px;
+}
+
+#select-causes input[type="radio"] {
+  display: none;
+}
+
+#select-causes {
+  height: 130px;
+  width: 130px;
+  padding: 20px 5px 5px 5px;
+  text-align: center;
+  box-shadow: $boxShadow;
+  border: none !important;
+  background-color: $lightPink !important;
+}
+
+#cause-div {
+  display: inline-block;
+  margin: 10px;
+}
+
+#interest {
+  color: $grey;
+  font-family: $mainFont;
+  padding: 40px 0 10px 0;
+}
+
+#select-causes input[type="radio"]:checked + span {
+  background-color: $pink;
+  color: $white;
+}
+
+#city-name, #state-name {
+  margin-right: 5px;
+  width: 240px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  font-family: $mainFont;
 }
 
 // EventsCal
@@ -199,18 +230,15 @@ span {
 
 // Search 
 #search-btn {
-  background-color: $lightPink !important;
-  color: $blue;
+  background-color: $grey !important;
+  color: $white;
   font-family: $mainFont;
-  width: 80px;
-  height: 28px;
+  margin: 40px 0px;
+  width: 88%;
+  height: 60px;
+  font-size: 28px;
   box-shadow: $boxShadow;
-  border-color: $white !important;
-}
-
-#city-name, #state-name {
-   margin-right: 5px;
-   font-family: $mainFont;
+  border: none;
 }
 
 // SearchResults
