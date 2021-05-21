@@ -11,8 +11,8 @@ const userSeed = [
   { userName: "lucy", password: "password12345", email: "lucy@netscape.com" },
 ];
 
-db.User.remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
+db.Users.remove({})
+  .then(() => db.Users.collection.insertMany(userSeed))
   .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
