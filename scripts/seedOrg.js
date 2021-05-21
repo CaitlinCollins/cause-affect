@@ -5,29 +5,55 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/causeaffect");
 
 const orgSeed = [
   {
-    name: "Soup Kitchen",
-    needs: "soup",
-    contact: "soupkitchen.com",
+    name: "Steve Johnson",
+    title: "Head HR",
+    email: "HRlead@soupkitchen.com",
+    orgName: "Soup Kitchen",
+    website: "soupkitchen.com",
+    details: "need 20 cans of soup",
+    username:"HRlead",
+    password:"password12345"
+    
   },
   {
-    name: "Our Lady of the Immaculate Birth",
-    needs: "diapers ",
-    contact: "612-213-9000",
+    name: "Sally Smith",
+    title: "Head volunteer services",
+    email: "S.Smith@volunteer.com",
+    orgName: "Volunteer Services",
+    website: "volunteerservices.com",
+    details: "need 20 blankets",
+    username:"ssmith",
+    password:"password12345"
   },
   {
-    name: "YMCA",
-    needs: "towels",
-    contact: "ymca.com",
+    name: "Don Higgs",
+    title: "Ops Manager",
+    email: "donhiggs@YMCA.com",
+    orgName: "YMCA",
+    website: "YMCA.com",
+    details: "need 20 towels",
+    username:"donhiggs",
+    password:"password12345"
   },
   {
-    name: "Food Drive",
-    needs: "beans, corn",
-    contact: "fooddrive.com",
+    name: "Beth Gruple",
+    title: "Collections Coordinator",
+    email: "Bethg@fooddrive.com",
+    orgName: "Food Drive",
+    website: "fooddrive.com",
+    details: "need 20 bags of beans",
+    username:"Bethg",
+    password:"password12345"
   },
   {
-    name: "Shelter",
-    needs: "Blankets",
-    contact: "Shelterhome.com",
+    name: "Larry Bar",
+    title: "Shelter Manager",
+    email: "manager@shelterhome.com",
+    orgName: "ShelterHome",
+    website: "shelterhome.com",
+    details: "need 20 diapers",
+    username:"larrybar",
+    password:"password12345"
   },
 ];
 
