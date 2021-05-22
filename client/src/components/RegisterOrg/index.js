@@ -3,12 +3,12 @@ import { Container, Row, Col } from "../Grid/grid";
 import "./style.css";
 import Modal from "../Modal"
 
-function Events() {
+function RegisterOrg() {
     return (
 
         <Container>
             <Row>
-            <h1>Create Events </h1>
+            <h1>Register your Organization </h1>
                 <Col size="md-6">
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="Your Name" />
@@ -57,4 +57,4 @@ function Events() {
     )
 
 }
-export default Events;
+export default RegisterOrg;
