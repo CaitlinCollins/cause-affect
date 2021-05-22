@@ -66,16 +66,16 @@ const UserInput = ({ handleSubmit }) => {
     return (
     <div>
        <form className="text-center">
-        <h2>Where are you looking to get involved?</h2>
-            <input type = "text" value = { city } placeholder="CITY (MINNEAPOLIS, ST. PAUL, ETC.)" onChange={(event) => setCity(event.target.value)}/>
-            <input type = "text" value={state} placeholder="STATE (MN) - (two letter abbreviation)" onChange={(event) => setState(event.target.value)}/>
-                <h3>What are your interests</h3> 
+        <h2>Where would you like to get involved?</h2>
+            <input id="city-name" type = "text" value = { city } placeholder="CITY (MINNEAPOLIS/ ST. PAUL)" onChange={(event) => setCity(event.target.value)}/>
+            <input id="state-name" type = "text" value={state} placeholder="STATE (MN) - (two letters)" onChange={(event) => setState(event.target.value)}/>
+                <h3 id="interest">Choose an Interest:</h3> 
                 <Row>
                     <Col size="md-4 sm-0">
                     </Col>
                     
                     <Col size="md-4 sm-12">
-                    <div className="text-center">
+                
                     
                         {/* <select value = {cause} onChange={(e) => setCause(e.target.value)}>
                         <option value = "2" >Arts, Culture, Humanities</option>
@@ -87,7 +87,7 @@ const UserInput = ({ handleSubmit }) => {
                         <div value = {cause} onChange={(e) => setCause(e.target.value)}>
                         {categoriesArray.map(category => {
                         return (
-                            
+                            <div id="cause-div">
                             <Causes 
                                 value={category.causeId}
                                 title={category.title}
@@ -96,19 +96,25 @@ const UserInput = ({ handleSubmit }) => {
                                 
                             />
                          
-                       
+                            </div>
                         )
                          
                     })}
                        </div>
-                        </div>
+                       
                      </Col>
                      <Col size="md-4 sm-0"></Col>
                     
                 </Row>
-                <button type="submit" value="Submit" onClick={sendData}>
-                    Submit
-                </button>
+                <Row>
+                    <Col size="md-4 sm-12"></Col>
+                    <Col size="md-4 sm-12">
+                        <button type="submit" value="Submit" onClick={sendData} id="search-btn">
+                            Search!
+                        </button>
+                    </Col>
+                    <Col size="md-4 sm-12"></Col>
+                </Row>
       </form>
     </div>
 )
