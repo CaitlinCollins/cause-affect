@@ -16,7 +16,7 @@ const orgSchema = new Schema({
   },
   orgName: { type: String, required: true },
   website: { type: String, required: true },
-  details: { type: String, required: true },
+  details: { type: String },
 
   username: {
     type: String,
