@@ -1,6 +1,6 @@
 module.exports = {
     Organization: require("./Organization"),
-    User: require("./User"),
+    Users: require("./Users"),
     Events: require("./Events"),
     Admin: require("./Admin")
   };
