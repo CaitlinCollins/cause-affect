@@ -1,12 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/grid";
-import RegisterBtn from "../registerBtn";
+import RegisterBtn from "../RegisterBtn";
 
 function Register() {
   return (
     <Container>
       <Row>
-        <Col size="md-12">
+      <Col size="md-2"></Col>
+        <Col size="md-8">
+          <div className="text-center">
           <div className="login-form">
             <h2 className="page-title">Register</h2>
             <form className="form ">
@@ -40,7 +42,9 @@ function Register() {
               </div>
             </form>
           </div>
+          </div>
         </Col>
+        <Col size="md-2"></Col>
       </Row>
     </Container>
   );

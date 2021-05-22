@@ -6,7 +6,9 @@ function Login() {
 return(
     <Container> 
 <Row>
-  <Col size="md-12">
+  <Col size="md-2"></Col>
+  <Col size="md-8">
+    <div className="text-center">
     <div className="login-form">
       <h2 className="page-title">Login</h2>
       <form className="form">
@@ -23,7 +25,9 @@ return(
         </div>
       </form>
     </div>
+    </div>
   </Col>
+  <Col size="md-2"></Col>
   </Row>
     </Container>
     

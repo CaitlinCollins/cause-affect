@@ -37,13 +37,19 @@ return (
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link">
-                                    <Link to="/Search" className="nav-link">Search
+                                    <Link to="/Register" className="nav-link">Register
                                     </Link>
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link">
-                                    <Link to="/Register" className="nav-link">Register
+                                    <Link to="/Login" className="nav-link">Login
+                                    </Link>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link">
+                                    <Link to="/Search" className="nav-link">Search
                                     </Link>
                                 </a>
                             </li>

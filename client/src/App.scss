@@ -19,7 +19,8 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
 // App
 #root {
   background-color: $lightBlue;
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
  }
 
 // Causes
@@ -62,7 +63,7 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
 }
 
 #select-causes input[type="radio"]:checked + span {
-  background-color: $pink;
+  background-color: $pink !important;
   color: $white;
 }
 
@@ -90,6 +91,10 @@ h2.fc-toolbar-title {
   box-shadow: $boxShadow;
   position: relative;
   padding: 20px;
+}
+
+#calendar-card {
+  margin-bottom: 100px;
 }
 
 h2 {
@@ -146,7 +151,10 @@ h2 {
 
 footer {
   margin-top: 20px;
+  position: fixed;
+  bottom: 0px;
   height: 40px;
+  width: 100%;
   font-family: $fancyFont;
   padding: 10px;
   text-align: center;
@@ -190,7 +198,7 @@ nav {
 } 
 
 
-span {
+.and {
   font-size: 48px;
   padding: 2px;
   color: $pink;
@@ -209,6 +217,7 @@ span {
   font-size: 22px;
   font-weight: bold;
   background-color: $lightPink;
+  box-shadow: $boxShadow;
 }
 
 .loginInput {
@@ -216,16 +225,20 @@ span {
 }
 
 .inputLogin {
-  width: 252px;
+  width: 200px;
   float: right;
 } 
 
 .loginBtn {
   background-color: $grey !important;
-  width: 252px;
+  color: $white !important;
+  font-family: $mainFont;
+  width: 200px;
   float: right;
   margin-right: 10px;
+  margin-top: 10px;
   font-weight: bold;
+  box-shadow: $boxShadow;
 }
 
 // Search 
@@ -233,7 +246,7 @@ span {
   background-color: $grey !important;
   color: $white;
   font-family: $mainFont;
-  margin: 40px 0px;
+  margin: 40px 0px 100px 0px;
   width: 88%;
   height: 60px;
   font-size: 28px;
