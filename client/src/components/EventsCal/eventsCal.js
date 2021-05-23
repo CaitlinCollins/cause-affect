@@ -7,7 +7,7 @@ export default class EventCalendar extends Component {
     render() {
         return(
             <div className="card" id="calendar-card">
-                <h2>Local Events</h2>
+                <h2 id="local-events-h2">Local Events</h2>
                 <FullCalendar id="calendar"
                  plugins={[ dayGridPlugin ]}
                  initialView="dayGridMonth" />
