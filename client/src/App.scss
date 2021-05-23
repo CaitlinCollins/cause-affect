@@ -131,7 +131,7 @@ h2 {
   text-align: center;
   font-size: 24px;
   padding: 20px;
-  color: $grey;
+  color: $darkgrey;
 }
 
 #website {
@@ -141,16 +141,20 @@ h2 {
 
 #volunteer-btn, #donate-btn {
   width: 200px;
-  height: 60px;
+  height: 60px !important;
   margin: .5%;
   margin-bottom: 20px !important;
   background-color: $grey !important;
-  color: $lightPink !important;
   font-family: $mainFont;
   font-size: 18px;
   box-shadow: $boxShadow;
   border: none !important;
  
+}
+
+#volunteer-link, #donate-link {
+  text-decoration: none !important;
+  color: $white;
 }
 
 .btn-center {
