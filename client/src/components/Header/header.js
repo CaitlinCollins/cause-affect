@@ -6,18 +6,14 @@ import "../../App.scss";
 function Header() {
 return (
   
-    <Row>
-        <Col size="md-12">
             <header>
-            <Row>
-                <Col size="md-4">
-                <h1 className="header">cause<span className="and">&</span>affect</h1>
-                </Col>
-                <Col size="md-8">
+                <div id="header-div">
+                    <h1 className="header">cause<span className="and">&</span>affect</h1>
+                </div>
                 <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                     <button
-                        className="navbar-toggler"
+                        className="navbar-toggler ml-auto "
                         type="button"
                         data-toggle="collapse"
                         data-target="#navbarNav"
@@ -63,11 +59,11 @@ return (
                     </div>
                 </div>
                 </nav>
-                </Col>
-                </Row>
+                <div className="marquee">
+                    <h4 id="marquee-text"> Want to volunteer for a local organization? Want to make a charitable donation that affects your local community? We're here to help! Register or Login to get started! And be sure to check out our featured local organization!</h4>
+                </div>
             </header>
-        </Col>
-    </Row>
+
 
     )
 
