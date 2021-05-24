@@ -5,6 +5,8 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 
+
+
 router.post("/register", async (req, res) => {
     console.log(req.body);
     try {
@@ -50,6 +52,8 @@ router.post("/register", async (req, res) => {
         const cmp = await bcrypt.compare(req.body.password, user.password);
         if (cmp) {
           //   ..... further code to maintain authentication like jwt or sessions javascrpt web token template react detect if logged in Auth0
+
+          
           
           req.session.save(() => {
             req.session.username = user.username;

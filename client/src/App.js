@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route  } from "react-router-dom";
 import { HashRouter } from 'react-router-dom';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/Search' component={Search} />
         <Route exact path='/Register' component={Register} />
         <Route exact path='/MyCal' component={MyCal} />
-        <Route exact path='/Login' component={Login} />
+        <Route exact path='/Login' component={Login}/> 
         <Route exact path='/Loginorg' component={LoginOrg} />
         <Route exact path='/RegisterOrg' component={RegisterOrg}/>
       <Footer />

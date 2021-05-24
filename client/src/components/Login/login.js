@@ -3,8 +3,11 @@ import { Container, Row, Col } from "../Grid/grid";
 import "../../App.scss";
 import API from "../../utils/API";
 import LoginBtn from "../LoginBtn";
+import {useHistory} from "react-router-dom";
+
 
 function Login() {
+  const history = useHistory();
   const [formObject, setFormObject] = useState({});
 
   function handleInputChange(event) {
@@ -12,13 +15,14 @@ function Login() {
     setFormObject({ ...formObject, [name]: value });
   }
   function handleFormSubmit(event) {
+    
     event.preventDefault();
     if (formObject.username && formObject.password) {
       API.loginUser({
         username: formObject.username,
         password: formObject.password,
       })
-        .then((res) => console.log(res))
+        .then((res) =>  history.push("/"))
         .catch((err) => console.log(err));
     }
   }

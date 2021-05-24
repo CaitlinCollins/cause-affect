@@ -3,8 +3,10 @@ import { Container, Row, Col } from "../Grid/grid";
 import "../../App.scss";
 import API from "../../utils/API";
 import LoginOrgBtn from "../LoginOrgBtn";
+import {useHistory} from "react-router-dom";
 
 function LoginOrg() {
+  const history = useHistory();
   const [formObject, setFormObject] = useState({});
 
   function handleInputChange(event) {
@@ -18,7 +20,7 @@ function LoginOrg() {
         username: formObject.username,
         password: formObject.password,
       })
-        .then((res) => console.log(res))
+        .then((res) => history.push("/"))
         .catch((err) => console.log(err));
     }
   }
