@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Container, Row, Col } from "../Grid/grid";
 import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -15,10 +16,16 @@ export default class EventCalendar extends Component {
 
   render() {
     return (
-      <div className='demo-app'>
-        {this.renderSidebar()}
-        <div className='demo-app-main'>
-            <h1>Local Events</h1>
+      <Row>
+        <Col size="lg-3 md-12">
+        <div className='demo-app'>
+          {this.renderSidebar()}
+       </div>
+        </Col>
+        <Col size="lg-9 md-12">
+        <div className='demo-app-main card' id="calendar-card">
+            <h2 id="local-events-h2">Local Events</h2>
+          <div id="calendar">
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
@@ -44,34 +51,37 @@ export default class EventCalendar extends Component {
             */
           />
         </div>
-      </div>
+        </div>
+        </Col>
+      </Row>
     )
   }
 
   renderSidebar() {
     return (
-      <div className='demo-app-sidebar'>
+      <div className='card demo-app-sidebar' id="sidebar-card">
         <div className='demo-app-sidebar-section'>
-          <h2>Instructions</h2>
-          <ul>
+          <h2 className="sidebar-h2">Instructions:</h2>
+          <ul className="sidebar-li">
             <li>Select dates and you will be prompted to create a new event</li>
             <li>Drag, drop, and resize events</li>
             <li>Click an event to delete it</li>
           </ul>
         </div>
         <div className='demo-app-sidebar-section'>
-          <label>
+          <label id="sidbar-check">
             <input
               type='checkbox'
               checked={this.state.weekendsVisible}
               onChange={this.handleWeekendsToggle}
+              id="checkbox"
             ></input>
             toggle weekends
           </label>
         </div>
         <div className='demo-app-sidebar-section'>
-          <h2>All Events ({this.state.currentEvents.length})</h2>
-          <ul>
+          <h2 className="sidebar-h2">All Events: ({this.state.currentEvents.length})</h2>
+          <ul className="sidebar-li">
             {this.state.currentEvents.map(renderSidebarEvent)}
           </ul>
         </div>
