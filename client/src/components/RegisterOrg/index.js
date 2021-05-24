@@ -1,7 +1,7 @@
 import React, { useState }  from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
-import "./style.css";
+import "../../App.scss";
 import Modal from "../Modal";
 import RegisterOrgBtn from "../RegisterOrgBtn";
 
@@ -33,8 +33,9 @@ function RegisterOrg() {
         
         <Container>
             <Row>
-            <h1>Register your Organization </h1>
-                <Col size="md-6">
+            <h2 className="page-title">Register Your Organization </h2>
+                <Col size="lg-6 md-8">
+                <div className="login-form text-center">
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="Your Name" 
                         name="name"
@@ -66,11 +67,13 @@ function RegisterOrg() {
                         name="details"
                         onChange={handleInputChange}/>
                     </div>
-                
+                    
+                    </div>
                 </Col>
                 <Col size="md-6">
+                    <div className="login-form text-center">
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="User Name" 
+                        <input type="text" className="form-control" placeholder="Username" 
                         name="username"
                         onChange={handleInputChange}/>
                     </div>
@@ -93,7 +96,7 @@ function RegisterOrg() {
                  onClick={handleFormSubmit}
                 >Register</RegisterOrgBtn>
               </div>
-
+              </div>
                 </Col>
 
 

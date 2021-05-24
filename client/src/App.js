@@ -8,6 +8,7 @@ import Search from './components/Search/search';
 import Register from './components/Register/register';
 import MyCal from './components/MyCal/myCal';
 import Login from './components/Login/login';
+import Logout from './components/Logout';
 import LoginOrg from "./components/LoginOrg/loginOrg";
 import './App.scss';
 import RegisterOrg from './components/RegisterOrg';
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/Register' component={Register} />
         <Route exact path='/MyCal' component={MyCal} />
         <Route exact path='/Login' component={Login}/> 
+        <Route exact path='/Logout' component={Logout}/> 
         <Route exact path='/Loginorg' component={LoginOrg} />
         <Route exact path='/RegisterOrg' component={RegisterOrg}/>
       <Footer />

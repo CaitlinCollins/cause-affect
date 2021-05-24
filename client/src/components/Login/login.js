@@ -3,11 +3,12 @@ import { Container, Row, Col } from "../Grid/grid";
 import "../../App.scss";
 import API from "../../utils/API";
 import LoginBtn from "../LoginBtn";
-import {useHistory} from "react-router-dom";
+import {useHistory, Link, useLocation} from "react-router-dom";
 
 
 function Login() {
   const history = useHistory();
+  const location = useLocation();
   const [formObject, setFormObject] = useState({});
 
   function handleInputChange(event) {
@@ -54,8 +55,9 @@ function Login() {
                   name="password"
                   onChange={handleInputChange}
                 />
+                 
               </div>
-
+             
               <div className="form-group">
                 <LoginBtn
                   disabled={!(formObject.username && formObject.password)}
@@ -63,6 +65,12 @@ function Login() {
                 >
                   Login
                 </LoginBtn>
+                <Link
+          to="/loginorg"
+          className={location.pathname === "/loginorg" ? "nav-link active" : "nav-link"}
+        >
+          Organization Login
+        </Link>
               </div>
             </form>
           </div>

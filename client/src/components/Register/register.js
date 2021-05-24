@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
 import RegisterBtn from "../RegisterBtn";
+import { Link, useLocation } from "react-router-dom";
 
 function Register() {
+  const location = useLocation();
   const [user, setUser] = useState([]);
   const [formObject, setFormObject] = useState({});
 
@@ -64,11 +66,28 @@ function Register() {
                 />
               </div>
               <div className="form-group">
-                
                 <RegisterBtn
-                 disabled={!(formObject.username && formObject.email && formObject.password)}
-                 onClick={handleFormSubmit}
-                >Register</RegisterBtn>
+                  disabled={
+                    !(
+                      formObject.username &&
+                      formObject.email &&
+                      formObject.password
+                    )
+                  }
+                  onClick={handleFormSubmit}
+                >
+                  Register
+                </RegisterBtn>
+                <Link
+                  to="/registerorg"
+                  className={
+                    location.pathname === "/registerorg"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Register Your Organization
+                </Link>
               </div>
             </form>
           </div>
