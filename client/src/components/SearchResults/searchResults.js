@@ -44,7 +44,7 @@ const SearchResults = ({ city, state, cause }) => {
     return (
        <div className="index">
         <h2 id="results-h2">
-          There are {items.length} that match your search:
+          There are {items.length} causes that match your search:
         </h2>
          {items.map(item => (
           <Result charity = { item } />
