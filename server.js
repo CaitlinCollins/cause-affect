@@ -34,7 +34,7 @@ app.use(require("./routes/authRoutes"));
 app.use(cors());
 // Connect to the Mongo DB
 mongoose.connect(
-  // process.env.MONGODB_URI || 
+  process.env.MONGODB_URI || 
   "mongodb://localhost/causeaffect");
 
 app.post("/charityApi", async (req, res) => {

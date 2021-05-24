@@ -45,6 +45,12 @@ return (
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link">
+                                    <Link to="/" className="nav-link">Logout
+                                    </Link>
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link">
                                     <Link to="/Search" className="nav-link">Search
                                     </Link>
                                 </a>
