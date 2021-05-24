@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require('express-session');
 
 const axios = require("axios");
 
@@ -12,9 +13,17 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 require("dotenv").config();
 
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true
+};
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session(sess));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

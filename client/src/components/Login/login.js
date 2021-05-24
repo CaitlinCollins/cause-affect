@@ -1,10 +1,13 @@
-import React,  {useState }  from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import "../../App.scss";
 import API from "../../utils/API";
 import LoginBtn from "../LoginBtn";
+import {useHistory} from "react-router-dom";
+
 
 function Login() {
+  const history = useHistory();
   const [formObject, setFormObject] = useState({});
 
   function handleInputChange(event) {
@@ -12,13 +15,14 @@ function Login() {
     setFormObject({ ...formObject, [name]: value });
   }
   function handleFormSubmit(event) {
+    
     event.preventDefault();
     if (formObject.username && formObject.password) {
       API.loginUser({
         username: formObject.username,
         password: formObject.password,
       })
-        .then((res) => console.log(res))
+        .then((res) =>  history.push("/"))
         .catch((err) => console.log(err));
     }
   }
@@ -37,9 +41,8 @@ function Login() {
                   className="form-input inputLogin"
                   type="text"
                   id="username-login"
-                  name= "username"
+                  name="username"
                   onChange={handleInputChange}
-
                 />
               </div>
               <div className="form-group loginInput">
@@ -48,17 +51,18 @@ function Login() {
                   className="form-input inputLogin"
                   type="password"
                   id="password-login"
-                  name= "password"
+                  name="password"
                   onChange={handleInputChange}
                 />
               </div>
 
-    
               <div className="form-group">
-              <LoginBtn
-                 disabled={!(formObject.username && formObject.password)}
-                 onClick={handleFormSubmit}
-                >Login</LoginBtn>
+                <LoginBtn
+                  disabled={!(formObject.username && formObject.password)}
+                  onClick={handleFormSubmit}
+                >
+                  Login
+                </LoginBtn>
               </div>
             </form>
           </div>
