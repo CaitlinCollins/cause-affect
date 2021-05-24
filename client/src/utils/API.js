@@ -8,8 +8,14 @@ export default {
         return axios.post("/register", userData);
     },
     loginUser: function (userData){
-        return axios.post("./login", userData)
-    }
+        return axios.post("/login", userData)
+    },
+    registerOrganization: function(userData){
+        return axios.post("/registerorg", userData)
+    },
+    loginOrg: function (userData){
+        return axios.post("/loginorg", userData)
+    },
     // getData:() => 
     // axios({
     //     'method':'GET',

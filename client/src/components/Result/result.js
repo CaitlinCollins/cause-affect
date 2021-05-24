@@ -8,7 +8,7 @@ const Result = ({ charity }) => {
                     <a 
                     className="charity-link" href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
                 </h4>
-                <p>{charity.mission}</p>
+                <p className="charity-mission">{charity.mission}</p>
             </div>
         </div>
     )
