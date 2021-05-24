@@ -28,7 +28,7 @@ function LoginOrg() {
       <Row>
         <Col size="md-12">
           <div className="login-form">
-            <h2 className="page-title">Login</h2>
+            <h2 className="page-title">Organization Login</h2>
             <form className="form">
               <div className="form-group loginInput">
                 <label for="username-login">Username:</label>

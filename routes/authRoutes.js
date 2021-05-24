@@ -50,13 +50,22 @@ router.post("/register", async (req, res) => {
         const cmp = await bcrypt.compare(req.body.password, user.password);
         if (cmp) {
           //   ..... further code to maintain authentication like jwt or sessions javascrpt web token template react detect if logged in Auth0
-          res.send("you're logged in");
+          
+          req.session.save(() => {
+            req.session.username = user.username;
+            req.session.password = user.password;
+            req.session.logged_in = true;
+      
+            res.status(200).json(user);
+          });
         } else {
           res.send("Wrong username or password.");
         }
       } else {
         res.send("Wrong username or password.");
       }
+      
+      
     } catch (error) {
       console.log(error);
       res.status(500).send("Internal Server error Occured");
