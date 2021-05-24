@@ -48,7 +48,7 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
   text-align: center;
   box-shadow: $boxShadow;
   border: none !important;
-  background-color: $lightPink !important;
+  background-color: $lightPink;
 }
 
 #cause-div {
@@ -66,6 +66,7 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
   background-color: $pink !important;
   color: $white;
 }
+
 
 #city-name, #state-name {
   margin-right: 5px;
@@ -112,7 +113,7 @@ h2.fc-toolbar-title {
 
 #calendar-card {
   height: 90%;
-  margin: 50px 10px 100px 10px;
+  margin: 50px 5px 100px 5px;
 }
 
 h2 {
@@ -130,7 +131,6 @@ h2 {
 
 #org-photo {
   max-width: 100%;
-  opacity: 80%;
   box-shadow: $boxShadow;
 }
 
@@ -213,6 +213,7 @@ h1 {
 
 nav {
   float: right;
+  z-index: 1;
   height: 40px !important;
   padding: 0px;
   background-color: $lightBlue !important;
@@ -234,8 +235,10 @@ nav {
 }
 .marquee {
   height: 40px;
-  overflow:hidden;
+  display: block;
+  margin: 0 auto;
   white-space: nowrap;
+  overflow:hidden;
   position: absolute;
   bottom: 5px;
   padding: 10px;
@@ -356,15 +359,16 @@ nav {
 }
 
 #charity-card {
-  max-width: 340px;
+  max-width: 440px;
   margin: 40px 10px 100px 10px;
-  background-color: $lightBlue;
+  background-color: $white;
   box-shadow: $boxShadow;
-  display:inline-block;
+  display: inline-block;
 }
 
 #charity-title {
   font-size: 22px;
+  padding: 10px;
   color: $blue !important;
   font: $mainFont;
 }

@@ -89,6 +89,7 @@ const UserInput = ({ handleSubmit }) => {
                         return (
                             <div id="cause-div">
                             <Causes 
+                                key={category.causeId}
                                 value={category.causeId}
                                 title={category.title}
                                 img={category.img}
