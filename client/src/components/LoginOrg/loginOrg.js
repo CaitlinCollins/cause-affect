@@ -28,8 +28,9 @@ function LoginOrg() {
   return (
     <Container>
       <Row>
-        <Col size="md-12">
-          <div className="login-form">
+        <Col size="md-3 sm-0"></Col>
+        <Col size="md-6 sm-12">
+          <div className="login-form text-center">
             <h2 className="page-title">Organization Login</h2>
             <form className="form">
               <div className="form-group loginInput">
@@ -64,6 +65,7 @@ function LoginOrg() {
             </form>
           </div>
         </Col>
+        <Col size="md-3 sm-0"></Col>
       </Row>
     </Container>
   );

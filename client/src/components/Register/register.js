@@ -78,16 +78,16 @@ function Register() {
                 >
                   Register
                 </RegisterBtn>
+                <div className="login-link">
                 <Link
                   to="/registerorg"
                   className={
                     location.pathname === "/registerorg"
-                      ? "nav-link active"
-                      : "nav-link"
                   }
                 >
                   Register Your Organization
                 </Link>
+                </div>
               </div>
             </form>
           </div>
