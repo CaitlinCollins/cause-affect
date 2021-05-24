@@ -3,12 +3,12 @@ import React from 'react';
 const Result = ({ charity }) => {
     return (
         <div>
-            <div>
-                <h1>
+            <div className="card text-center">
+                <h4 className="charity-title">
                     <a 
-                    href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
-                </h1>
-                <p>{charity.mission}</p>
+                    className="charity-link" href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
+                </h4>
+                <p className="charity-mission">{charity.mission}</p>
             </div>
         </div>
     )

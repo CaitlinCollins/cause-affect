@@ -28,8 +28,9 @@ function Register() {
   return (
     <Container>
       <Row>
-        <Col size="md-12">
-          <div className="login-form">
+        <Col size="lg-3 md-2"></Col>
+        <Col size="lg-6 md-8">
+          <div className="login-form text-center">
             <h2 className="page-title">Register</h2>
             <form className="form ">
               <div className="form-group loginInput">
@@ -72,6 +73,7 @@ function Register() {
             </form>
           </div>
         </Col>
+        <Col size="lg-3 md-2"></Col>
       </Row>
     </Container>
   );
