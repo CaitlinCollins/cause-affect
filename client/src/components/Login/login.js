@@ -55,9 +55,7 @@ function Login() {
                   name="password"
                   onChange={handleInputChange}
                 />
-                 
               </div>
-             
               <div className="form-group">
                 <LoginBtn
                   disabled={!(formObject.username && formObject.password)}
@@ -65,14 +63,16 @@ function Login() {
                 >
                   Login
                 </LoginBtn>
-                <Link
-          to="/loginorg"
-          className={location.pathname === "/loginorg" ? "nav-link active" : "nav-link"}
-        >
-          Organization Login
-        </Link>
+                <div className="login-link">
+                    <Link
+                    to="/loginorg"
+                    className={location.pathname}
+                  >
+                    Organization Login
+                  </Link>
+                </div>
               </div>
-            </form>
+            </form>  
           </div>
         </Col>
         <Col size="lg-3 md-2"></Col>
