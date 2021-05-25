@@ -4,7 +4,10 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from '../../utils/Events'
+import Modal from '../Modal'
 import "../../App.scss";
+
+
 
 export default class EventCalendar extends Component {
 
@@ -14,11 +17,18 @@ export default class EventCalendar extends Component {
   }
 
   render() {
+    const triggerText = "Create Event"
+    const onSubmit = (event) => {
+      event.preventDefault(event);
+      console.log(event.target.title.value);
+      console.log(event.target.date.value);
+    };
     return (
       <div className='demo-app'>
         {this.renderSidebar()}
         <div className='demo-app-main'>
             <h1>Local Events</h1>
+            <Modal triggerText={triggerText} onSubmit={onSubmit} />
           <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
             headerToolbar={{
