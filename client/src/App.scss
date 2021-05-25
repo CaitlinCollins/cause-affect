@@ -112,7 +112,7 @@ h2.fc-toolbar-title {
 }
 
 #calendar-card {
-  height: 90%;
+  height: 85%;
   margin: 50px 5px 100px 5px;
 }
 
@@ -169,9 +169,6 @@ h2 {
   text-align: center;
 }
 
-.modal-button {
-  color: $darkgrey;
-}
 
 // Footer
 
@@ -237,58 +234,40 @@ nav {
   padding: 2px;
   color: $pink;
 }
-.marquee {
-  height: 40px;
-  display: block;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow:hidden;
-  position: absolute;
-  bottom: 5px;
-  padding: 10px;
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin-top: 220px;
   background-color: $white;
-  font-family: $fancyFont;
+  height: 40px;
+}
+
+.marquee-wrapper::before {
+  content: '\00a0';
+}
+
+.marquee-scrolling {
+  animation: marquee 30s linear infinite;
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  white-space: nowrap;
 }
 
 #marquee-text {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  font-size: 22px;
+  padding: 10px !important;
   font-family: $fancyFont;
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  -moz-animation: scroll-left 2s linear infinite;
-  -webkit-animation: scroll-left 2s linear infinite;
-  animation: scroll-left 30s linear infinite;
-}
-@-moz-keyframes scroll-left {
-  0% {
-      -moz-transform: translateX(100%);
-  }
-  100% {
-      -moz-transform: translateX(-100%);
-  }
 }
 
-@-webkit-keyframes scroll-left {
-  0% {
-      -webkit-transform: translateX(100%);
-  }
-  100% {
-      -webkit-transform: translateX(-100%);
-  }
-}
-
-@keyframes scroll-left {
-  0% {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
+@keyframes marquee {
+  from {
       transform: translateX(100%);
   }
-  100% {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
+  to {
       transform: translateX(-100%);
   }
 }
@@ -398,16 +377,26 @@ nav {
   border: none !important;
 }
 
+.modal-button {
+  margin: 0 1%;
+  height: 70px !important;
+}
 
 // Media Queries
 @media only screen and (max-width: 1200px) {
   header {
     height: 280px;
   }
+  .marquee-wrapper {
+    margin-top: 190px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   header {
     height: 250px;
+  }
+  .marquee-wrapper {
+    margin-top: 160px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -416,6 +405,9 @@ nav {
   }
   header {
     height: 220px;
+  }
+  .marquee-wrapper {
+    margin-top: 130px;
   }
 
   .nav-link {
@@ -440,15 +432,22 @@ nav {
   header {
     height: 185px;
   }
+  .marquee-wrapper {
+    margin-top: 82px;
+  }
   .fc-daygrid-more-link, .fc-daygrid-day-number {
     font-size: 10px;
+  }
+  .modal-button {
+    width: 110px;
+    font-size: 13px;
   }
 
 }
 @media only screen and (max-width: 670px) {
   #local-events-h2 {
     font-size: 20px !important;
-    padding: 0px;
+    padding: 30px 0 20px 0;
     
   }
   .fc {
@@ -461,8 +460,8 @@ nav {
     margin-bottom: 10px !important;
   }
   .fc-today-button, .fc-prev-button, .fc-next-button{
-    height: 30px;
-    font-size: 12px !important;
+    height: 24px;
+    font-size: 10px !important;
   }
 }
 
@@ -486,6 +485,11 @@ nav {
     width: 50px;
     font-size: 10px !important;
   }
+  .modal-button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -498,7 +502,7 @@ nav {
 
 
 .demo-app {
-  display: flex;
+  display: block;
   min-height: 100%;
   font-size: 14px;
 }
@@ -606,7 +610,8 @@ nav {
   height: 90%;
 }
 .sidebar-h2 {
-  font-size: 22px;
+  font-size: 18px;
+  padding: 20px 0px;
 }
 
 .sidebar-li, #sidbar-check {
@@ -619,5 +624,4 @@ nav {
 #checkbox, li::marker {
   margin-right: 5px;
 }
-
 

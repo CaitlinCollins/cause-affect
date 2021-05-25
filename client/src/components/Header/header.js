@@ -66,8 +66,7 @@ return (
                 </div>
                 </nav>
                 <div className="marquee-wrapper">
-                    <div className="marquee">
-                    <h4 id="marquee-text"> Want to volunteer for a local organization? Want to make a charitable donation that affects your local community? We're here to help! Register or Login to get started! And be sure to check out our featured local organization!</h4>
+                    <div className="marquee-scrolling"id="marquee-text"> Want to volunteer for a local organization? Want to make a charitable donation that affects your local community? We're here to help! Register or Login to get started! And be sure to check out our featured local organization!
                     </div>
                 </div>
             </header>

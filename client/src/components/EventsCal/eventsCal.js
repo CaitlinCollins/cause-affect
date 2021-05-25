@@ -25,15 +25,12 @@ export default class EventCalendar extends Component {
       console.log(event.target.date.value);
     };
     return (
-       <div>
-            
-        
-
-      <Row>
+  
+        <Row>
         <Col size="lg-3 md-12">
-        <div className='demo-app'>
-          {this.renderSidebar()}
-       </div>
+          <div className='demo-app'>
+            {this.renderSidebar()}
+          </div>
         </Col>
         <Col size="lg-9 md-12">
         <div className='demo-app-main card' id="calendar-card">
