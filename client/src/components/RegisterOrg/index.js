@@ -4,8 +4,10 @@ import API from "../../utils/API";
 import "../../App.scss";
 import Modal from "../Modal";
 import RegisterOrgBtn from "../RegisterOrgBtn";
+import {useHistory} from "react-router-dom";
 
 function RegisterOrg() {
+    const history = useHistory();
     const [formObject, setFormObject] = useState({});
 
     function handleInputChange(event) {
@@ -25,7 +27,7 @@ function RegisterOrg() {
             username: formObject.username,
             password: formObject.password,
           })
-            .then((res) => console.log(res))
+            .then((res) => history.push("/"))
             .catch((err) => console.log(err));
         }
       }

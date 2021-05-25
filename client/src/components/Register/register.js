@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
 import RegisterBtn from "../RegisterBtn";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation ,useHistory} from "react-router-dom";
 
 function Register() {
+  const history = useHistory();
   const location = useLocation();
   const [user, setUser] = useState([]);
   const [formObject, setFormObject] = useState({});
@@ -22,7 +23,7 @@ function Register() {
         email: formObject.email,
         password: formObject.password,
       })
-        .then((res) => console.log(res))
+        .then((res) => history.push("/"))
         .catch((err) => console.log(err));
     }
   }
