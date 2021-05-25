@@ -25,12 +25,9 @@ export default class EventCalendar extends Component {
       console.log(event.target.date.value);
     };
     return (
-
-      <div className='demo-app'>
-        {this.renderSidebar()}
-        <div className='demo-app-main'>
-            <h1>Local Events</h1>
-            <Modal triggerText={triggerText} onSubmit={onSubmit} />
+       <div>
+            
+        
 
       <Row>
         <Col size="lg-3 md-12">
@@ -41,6 +38,7 @@ export default class EventCalendar extends Component {
         <Col size="lg-9 md-12">
         <div className='demo-app-main card' id="calendar-card">
             <h2 id="local-events-h2">Local Events</h2>
+            <Modal triggerText={triggerText} onSubmit={onSubmit} />
           <div id="calendar">
 
           <FullCalendar
@@ -71,6 +69,7 @@ export default class EventCalendar extends Component {
         </div>
         </Col>
       </Row>
+      </div>
     )
   }
 
