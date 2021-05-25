@@ -1,5 +1,4 @@
-/* @import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css'; */
+// // // // VARIABLES // // // // 
 
 $lightBlue: rgb(229, 238, 247);
 $lightPink: rgb(247, 231, 231);
@@ -16,14 +15,17 @@ $fancyFont: 'Special Elite', cursive;
 
 $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
 
-// App
+
+
+// // // // APP // // // // 
 #root {
   background-color: $lightBlue;
   width: 100vw;
   min-height: 100vh;
  }
 
-// Causes
+
+// // // // CAUSES // // // // 
 
 .cause-title {
   font-family: $mainFont;
@@ -77,14 +79,17 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
   font-family: $mainFont;
 }
 
-// EventsCal
+
+// // // // EVENTS CAL // // // // 
+
+
 #calendar {
   margin: 5px !important;
   width: 100%;
 
 }
 
-h2.fc-toolbar-title {
+.fc-toolbar-title {
   font-size: 20px !important;
 }
 
@@ -104,23 +109,33 @@ h2.fc-toolbar-title {
   color: $pink !important;
 }
 
-// Featured
-.card {
-  box-shadow: $boxShadow;
-  position: relative;
-  padding: 20px;
-}
 
-#calendar-card {
-  height: 85%;
-  margin: 50px 5px 100px 5px;
-}
+
+// // // // FEATURED // // // // 
+
 
 h2 {
   font-family: $mainFont;
   text-align: center;
   padding: 20px;
   color: $grey;
+}
+
+.card {
+  box-shadow: $boxShadow;
+  position: relative;
+  padding: 20px;
+}
+
+
+.btn-center {
+  text-align: center;
+
+}
+
+#calendar-card {
+  height: 85%;
+  margin: 50px 5px 100px 5px;
 }
 
 #featured-background {
@@ -165,12 +180,10 @@ h2 {
   color: $white;
 }
 
-.btn-center {
-  text-align: center;
-}
 
 
-// Footer
+// // // // FOOTER // // // // 
+
 
 footer {
   margin-top: 20px;
@@ -187,7 +200,9 @@ footer {
   font-size: 16px;
 }
 
-// Header
+
+// // // // HEADER // // // // 
+
 header {
   width: 100vw;
   height: 330px;
@@ -272,7 +287,8 @@ nav {
   }
 }
 
-// Login
+
+// // // // LOGIN // // // // 
 
 .login-form {
   width: 100%;
@@ -314,7 +330,8 @@ nav {
   display: inline-block;
 }
 
-// Search 
+
+// // // // SEARCH // // // // 
 
 #results-h2 {
   margin: 20px 10px;
@@ -332,7 +349,9 @@ nav {
   border: none;
 }
 
-// SearchResults
+
+// // // // SEARCH RESULTS // // // // 
+
 #org-details {
   font-family: $mainFont;
   text-align: center;
@@ -380,6 +399,7 @@ nav {
 .modal-button {
   margin: 0 1%;
   height: 70px !important;
+
 }
 
 // Media Queries
@@ -496,10 +516,11 @@ nav {
   .inputLogin, .loginBtn {
     width: 140px;
   }
+
 }
 
 
-
+// // // // SIDEBAR // // // // 
 
 .demo-app {
   display: block;
@@ -528,6 +549,8 @@ nav {
 }
 
 
+// // // // MODAL // // // // 
+
 .modal-cover {
   position: fixed;
   top: 0;
@@ -550,18 +573,6 @@ nav {
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-@media screen and (min-width: 500px) {
-  /* Center the Modal! */
-  .modal-area {
-    left: 50%;
-    top: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    max-width: 30em;
-    max-height: calc(100% - 1em);
-  }
 }
 
 ._modal-close {
@@ -624,4 +635,138 @@ nav {
 #checkbox, li::marker {
   margin-right: 5px;
 }
+
+
+
+
+
+
+
+// // // // MEDIA QUERIES // // // // 
+
+@media only screen and (max-width: 1200px) {
+  header {
+    height: 280px;
+  }
+  .marquee-wrapper {
+    margin-top: 190px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 250px;
+  }
+  .marquee-wrapper {
+    margin-top: 160px;
+  }
+}
+@media only screen and (max-width: 991px) {
+	nav {
+    background-color: transparent !important;
+  }
+  header {
+    height: 220px;
+  }
+  .marquee-wrapper {
+    margin-top: 130px;
+  }
+
+  .nav-link {
+    padding: 2px !important;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    background-color: $white !important;
+    color: $grey !important;
+  }
+
+  .navbar-toggler {
+    margin-bottom: 8px !important;
+    width: 120px;
+    background-color: $lightBlue !important;
+    color: $white !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: 185px;
+  }
+  .marquee-wrapper {
+    margin-top: 82px;
+  }
+  .fc-daygrid-more-link, .fc-daygrid-day-number {
+    font-size: 10px;
+  }
+  .modal-button {
+    width: 110px;
+    font-size: 13px;
+  }
+
+}
+@media only screen and (max-width: 670px) {
+  #local-events-h2 {
+    font-size: 20px !important;
+    padding: 30px 0 20px 0;
+    
+  }
+  .fc {
+    height: 550px;
+  }
+  .fc-toolbar-title{
+    font-size: 12px !important;
+  }
+  .fc-header-toolbar {
+    margin-bottom: 10px !important;
+  }
+  .fc-today-button, .fc-prev-button, .fc-next-button{
+    height: 24px;
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    font-size: 24px !important;
+    width: 50%;
+    margin-right: 0 !important;
+  }
+  .and {
+    font-size: 38px !important;
+  }
+  label, .inputLogin {
+    font-size: 16px;
+  }
+  .inputLogin, .loginBtn {
+    width: 180px;
+  }
+
+  .fc-dayGridMonth-button, .fc-timeGridWeek-button , .fc-timeGridDay-button {
+    width: 50px;
+    font-size: 10px !important;
+  }
+
+  .modal-button {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
+  /* Center the Modal! */
+  .modal-area {
+    left: 50%;
+    top: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    max-width: 30em;
+    max-height: calc(100% - 1em);
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .inputLogin, .loginBtn {
+    width: 140px;
+  }
+}
+
 

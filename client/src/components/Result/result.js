@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from "../Grid/grid";
+import { Row, Col } from "../Grid/grid";
 
 const Result = ({ charity }) => {
     return (
