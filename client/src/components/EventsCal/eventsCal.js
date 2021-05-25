@@ -66,7 +66,7 @@ export default class EventCalendar extends Component {
         </div>
         </Col>
       </Row>
-      </div>
+      
     )
   }
 

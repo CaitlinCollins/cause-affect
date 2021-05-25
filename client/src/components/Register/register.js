@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
 import RegisterBtn from "../RegisterBtn";
-import { Link, useLocation ,useHistory} from "react-router-dom";
-
+import { Link, useLocation, useHistory } from "react-router-dom";
+// register users
 function Register() {
   const history = useHistory();
   const location = useLocation();
-  const [user, setUser] = useState([]);
   const [formObject, setFormObject] = useState({});
-
+// accept user input
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
@@ -23,6 +22,7 @@ function Register() {
         email: formObject.email,
         password: formObject.password,
       })
+      // return to home once registered
         .then((res) => history.push("/"))
         .catch((err) => console.log(err));
     }
@@ -80,14 +80,13 @@ function Register() {
                   Register
                 </RegisterBtn>
                 <div className="login-link">
-                <Link
-                  to="/registerorg"
-                  className={
-                    location.pathname === "/registerorg"
-                  }
-                >
-                  Register Your Organization
-                </Link>
+                  {/* add link to register an organization */}
+                  <Link
+                    to="/registerorg"
+                    className={location.pathname === "/registerorg"}
+                  >
+                    Register Your Organization
+                  </Link>
                 </div>
               </div>
             </form>

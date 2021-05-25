@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-
+// seed organizations
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/causeaffect");
 
 const orgSeed = [
@@ -11,9 +11,8 @@ const orgSeed = [
     orgName: "Soup Kitchen",
     website: "soupkitchen.com",
     details: "need 20 cans of soup",
-    username:"HRlead",
-    password:"password12345"
-    
+    username: "HRlead",
+    password: "password12345",
   },
   {
     name: "Sally Smith",
@@ -22,8 +21,8 @@ const orgSeed = [
     orgName: "Volunteer Services",
     website: "volunteerservices.com",
     details: "need 20 blankets",
-    username:"ssmith",
-    password:"password12345"
+    username: "ssmith",
+    password: "password12345",
   },
   {
     name: "Don Higgs",
@@ -32,8 +31,8 @@ const orgSeed = [
     orgName: "YMCA",
     website: "YMCA.com",
     details: "need 20 towels",
-    username:"donhiggs",
-    password:"password12345"
+    username: "donhiggs",
+    password: "password12345",
   },
   {
     name: "Beth Gruple",
@@ -42,8 +41,8 @@ const orgSeed = [
     orgName: "Food Drive",
     website: "fooddrive.com",
     details: "need 20 bags of beans",
-    username:"Bethg",
-    password:"password12345"
+    username: "Bethg",
+    password: "password12345",
   },
   {
     name: "Larry Bar",
@@ -52,18 +51,18 @@ const orgSeed = [
     orgName: "ShelterHome",
     website: "shelterhome.com",
     details: "need 20 diapers",
-    username:"larrybar",
-    password:"password12345"
+    username: "larrybar",
+    password: "password12345",
   },
 ];
 
-db.Organization.remove({}).then(() =>
-  db.Organization.collection.insertMany(orgSeed)
-).then(data => {
+db.Organization.remove({})
+  .then(() => db.Organization.collection.insertMany(orgSeed))
+  .then((data) => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
-})
-.catch(err => {
+  })
+  .catch((err) => {
     console.error(err);
     process.exit(1);
   });
