@@ -1,7 +1,7 @@
 import { set } from "mongoose";
 import React from "react";
 import Causes from "../Causes/causes";
-import { Container, Row, Col } from "../Grid/grid";
+import { Row, Col } from "../Grid/grid";
 const UserInput = ({ handleSubmit }) => {
 
     

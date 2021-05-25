@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Container, Row, Col } from "../Grid/grid";
+import { Row, Col } from "../Grid/grid";
 import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'

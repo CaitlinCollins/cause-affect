@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid/grid";
 import "../../App.scss";
 
 function Footer() {

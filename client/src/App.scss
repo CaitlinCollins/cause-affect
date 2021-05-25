@@ -1,5 +1,4 @@
-/* @import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css'; */
+// // // // VARIABLES // // // // 
 
 $lightBlue: rgb(229, 238, 247);
 $lightPink: rgb(247, 231, 231);
@@ -16,14 +15,17 @@ $fancyFont: 'Special Elite', cursive;
 
 $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
 
-// App
+
+
+// // // // APP // // // // 
 #root {
   background-color: $lightBlue;
   width: 100vw;
   min-height: 100vh;
  }
 
-// Causes
+
+// // // // CAUSES // // // // 
 
 .cause-title {
   font-family: $mainFont;
@@ -77,14 +79,17 @@ $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
   font-family: $mainFont;
 }
 
-// EventsCal
+
+// // // // EVENTS CAL // // // // 
+
+
 #calendar {
   margin: 5px !important;
   width: 100%;
 
 }
 
-h2.fc-toolbar-title {
+.fc-toolbar-title {
   font-size: 20px !important;
 }
 
@@ -104,23 +109,31 @@ h2.fc-toolbar-title {
   color: $pink !important;
 }
 
-// Featured
-.card {
-  box-shadow: $boxShadow;
-  position: relative;
-  padding: 20px;
-}
 
-#calendar-card {
-  height: 85%;
-  margin: 50px 5px 100px 5px;
-}
+
+// // // // FEATURED // // // // 
+
 
 h2 {
   font-family: $mainFont;
   text-align: center;
   padding: 20px;
   color: $grey;
+}
+
+.card {
+  box-shadow: $boxShadow;
+  position: relative;
+  padding: 20px;
+}
+
+.btn-center {
+  text-align: center;
+}
+
+#calendar-card {
+  height: 85%;
+  margin: 50px 5px 100px 5px;
 }
 
 #featured-background {
@@ -165,12 +178,8 @@ h2 {
   color: $white;
 }
 
-.btn-center {
-  text-align: center;
-}
 
-
-// Footer
+// // // // FOOTER // // // // 
 
 footer {
   margin-top: 20px;
@@ -187,7 +196,9 @@ footer {
   font-size: 16px;
 }
 
-// Header
+
+// // // // HEADER // // // // 
+
 header {
   width: 100vw;
   height: 330px;
@@ -272,7 +283,8 @@ nav {
   }
 }
 
-// Login
+
+// // // // LOGIN // // // // 
 
 .login-form {
   width: 100%;
@@ -314,7 +326,8 @@ nav {
   display: inline-block;
 }
 
-// Search 
+
+// // // // SEARCH // // // // 
 
 #results-h2 {
   margin: 20px 10px;
@@ -332,7 +345,9 @@ nav {
   border: none;
 }
 
-// SearchResults
+
+// // // // SEARCH RESULTS // // // // 
+
 #org-details {
   font-family: $mainFont;
   text-align: center;
@@ -382,7 +397,130 @@ nav {
   height: 70px !important;
 }
 
-// Media Queries
+
+// // // // SIDEBAR // // // // 
+
+.demo-app {
+  display: block;
+  min-height: 100%;
+  font-size: 14px;
+}
+
+.demo-app-sidebar {
+  width: 100%;
+  line-height: 1.5;
+  margin: 50px 10px 100px 10px;
+}
+
+.demo-app-sidebar-section {
+  padding: 1.5em;
+}
+
+.demo-app-main {
+  flex-grow: 1;
+  padding: 1em;
+}
+
+.fc { /* the calendar root */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+// // // // MODAL // // // // 
+
+.modal-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateZ(0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5em 1.5em 1.5em 1.5em;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+._modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  line-height: 1;
+  background: #f6f6f7;
+  border: 0;
+  box-shadow: 0;
+  cursor: pointer;
+}
+
+._modal-close-icon {
+  width: 25px;
+  height: 25px;
+  fill: transparent;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+.modal-body {
+  padding-top: 0.25em;
+}
+._hide-visual {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.scroll-lock {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
+#sidebar-card {
+  background-color: $lightBlue;
+  height: 90%;
+}
+.sidebar-h2 {
+  font-size: 18px;
+  padding: 20px 0px;
+}
+
+.sidebar-li, #sidbar-check {
+  font-size: 18px !important;
+  font-family: $mainFont !important;
+  padding: 10px 10px 0 10px;
+  margin: 2px;
+}
+
+#checkbox, li::marker {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+// // // // MEDIA QUERIES // // // // 
+
 @media only screen and (max-width: 1200px) {
   header {
     height: 280px;
@@ -485,74 +623,12 @@ nav {
     width: 50px;
     font-size: 10px !important;
   }
+
   .modal-button {
     width: 80px;
     height: 40px;
     font-size: 10px;
   }
-}
-
-@media only screen and (max-width: 350px) {
-  .inputLogin, .loginBtn {
-    width: 140px;
-  }
-}
-
-
-
-
-.demo-app {
-  display: block;
-  min-height: 100%;
-  font-size: 14px;
-}
-
-.demo-app-sidebar {
-  width: 100%;
-  line-height: 1.5;
-  margin: 50px 10px 100px 10px;
-}
-
-.demo-app-sidebar-section {
-  padding: 1.5em;
-}
-
-.demo-app-main {
-  flex-grow: 1;
-  padding: 1em;
-}
-
-.fc { /* the calendar root */
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-
-.modal-cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  transform: translateZ(0);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-area {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 2.5em 1.5em 1.5em 1.5em;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media screen and (min-width: 500px) {
   /* Center the Modal! */
   .modal-area {
     left: 50%;
@@ -564,64 +640,10 @@ nav {
   }
 }
 
-._modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5em;
-  line-height: 1;
-  background: #f6f6f7;
-  border: 0;
-  box-shadow: 0;
-  cursor: pointer;
+@media only screen and (max-width: 350px) {
+  .inputLogin, .loginBtn {
+    width: 140px;
+  }
 }
 
-._modal-close-icon {
-  width: 25px;
-  height: 25px;
-  fill: transparent;
-  stroke: black;
-  stroke-linecap: round;
-  stroke-width: 2;
-}
-
-.modal-body {
-  padding-top: 0.25em;
-}
-._hide-visual {
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-}
-
-.scroll-lock {
-  overflow: hidden;
-  margin-right: 17px;
-}
-
-#sidebar-card {
-  background-color: $lightBlue;
-  height: 90%;
-}
-.sidebar-h2 {
-  font-size: 18px;
-  padding: 20px 0px;
-}
-
-.sidebar-li, #sidbar-check {
-  font-size: 18px !important;
-  font-family: $mainFont !important;
-  padding: 10px 10px 0 10px;
-  margin: 2px;
-}
-
-#checkbox, li::marker {
-  margin-right: 5px;
-}
 
