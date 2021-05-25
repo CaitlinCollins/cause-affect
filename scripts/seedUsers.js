@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-
+// seed users
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/causeaffect");
 
 const userSeed = [
   { userName: "helper", password: "password12345", email: "helper@help.com" },
-  { userName: "localhero", password: "password12345", email: "localhero@gmail.com" },
+  {
+    userName: "localhero",
+    password: "password12345",
+    email: "localhero@gmail.com",
+  },
   { userName: "doug", password: "password12345", email: "doug@yahoo.com" },
   { userName: "rupert", password: "password12345", email: "rupert@aol.com" },
   { userName: "lucy", password: "password12345", email: "lucy@netscape.com" },

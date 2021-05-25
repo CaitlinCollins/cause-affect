@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-
+// seed admin user
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/causeaffect");
 
 const adminSeed = [
