@@ -61,7 +61,7 @@ export default class EventCalendar extends Component {
       
         <Col size="lg-9 md-12">
           <div className='demo-app-main card' id="calendar-card">
-              <h2 id="local-events-h2">Local Events: ({this.state.currentEvents.length ? this.state.currentEvents[0].title : null})</h2>
+              <h2 id="local-events-h2">Local Events</h2>
               <div id="modal-center">
                 <Modal triggerText={triggerText} />
               </div>
@@ -81,16 +81,7 @@ export default class EventCalendar extends Component {
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
             events={ this.state.currentEvents.length ? this.state.currentEvents :
-              [
-                {
-                  title: "Food Drive",
-                  date: "2021-05-28",
-                  start: "2021-05-28T09:00:00",
-                  end: "2021-05-28T11:00:00",
-                  volunteersNeeded: 12,
-                },
-                
-              ]
+              null
             }
             
           />

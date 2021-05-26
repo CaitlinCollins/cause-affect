@@ -22,11 +22,6 @@ const UserInput = ({ handleSubmit }) => {
             causeId: "8"
         },
         {
-            title: "Food",
-            img: "apple-alt",
-            causeId: "4"
-        },
-        {
             title: "Arts & Culture",
             img: "palette",
             causeId: "2"
