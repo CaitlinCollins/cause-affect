@@ -178,7 +178,7 @@ h2 {
 
 #volunteer-link, #donate-link {
   text-decoration: none !important;
-  color: $white;
+  color: $white !important;
 }
 
 
@@ -442,8 +442,24 @@ nav {
 
 // // // // MODAL // // // // 
 
+#new-event {
+  color: $pink;
+}
+
+#new-event, .modal-group {
+  font-family: $mainFont !important;
+  margin-left: 0px;
+  padding-bottom: 10px;
+  
+}
 #modal-center {
   text-align: center;
+}
+
+#modal-btn {
+  background-color: $blue;
+  border: none;
+  box-shadow: $boxShadow;
 }
 
 .modal-cover {
