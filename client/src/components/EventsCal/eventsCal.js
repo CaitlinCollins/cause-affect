@@ -7,6 +7,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from '../../utils/Events'
 import Modal from '../Modal'
 import "../../App.scss";
+import API from "../../utils/API";
 
 
 
@@ -15,6 +16,20 @@ export default class EventCalendar extends Component {
   state = {
     weekendsVisible: true,
     currentEvents: []
+  }
+
+  loadEvents = () => {
+    API.getEvents()
+      .then(res => {
+        this.state.currentEvents = res.data
+        console.log(res.data)
+      }
+      )
+      .catch(err => console.log(err));
+  };
+  componentDidMount() {
+    console.log("Component Mounted")
+    this.loadEvents();
   }
 
   render() {

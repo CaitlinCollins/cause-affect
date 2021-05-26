@@ -26,13 +26,10 @@ export default {
     return axios.post("/api/calendar", eventData);
   }
 };
-  // getData:() =>
-  // axios({
-  //     'method':'GET',
-  //     'url': `https://api.data.charitynavigator.org/v2/Organizations?app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}&state=${req.query.state}&city=${req.query.city}&categoryID=${req.query.cause}`,
-  //     // 'params': {
-  //     //     'search':'parameter',
-  //     // },
-  // }
 
-  // )
+  // const eventSchema = new Schema({
+    // eventName:
+    // eventDate:
+    // eventTime: 
+    // volunteersNeeded:
+  // });

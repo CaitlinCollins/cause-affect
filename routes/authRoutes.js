@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Users = require("../models/Users");
-const Organization = require("../models/organization");
+const Organization = require("../models/Organization");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 // register user

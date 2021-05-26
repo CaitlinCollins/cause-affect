@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(require("./routes/authRoutes"));
-// app.use(require("./routes/index"));
+app.use(require("./routes/index"));
 app.use(cors());
 // Connect to the Mongo DB
 mongoose.connect(
