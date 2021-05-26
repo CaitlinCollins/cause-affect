@@ -134,7 +134,7 @@ h2 {
 }
 
 #calendar-card {
-  height: 85%;
+  height: 88%;
   margin: 50px 5px 100px 5px;
 }
 
@@ -146,6 +146,7 @@ h2 {
 
 #org-photo {
   max-width: 100%;
+  filter: opacity(60%);
   box-shadow: $boxShadow;
 }
 
@@ -189,10 +190,10 @@ footer {
   margin-top: 20px;
   position: fixed;
   bottom: 0px;
-  height: 40px;
+  height: 50px;
   width: 100%;
   font-family: $fancyFont;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   color: $white;
   background-color: $grey;
@@ -398,124 +399,8 @@ nav {
 
 .modal-button {
   margin: 0 1%;
-  height: 70px !important;
-
-}
-
-// Media Queries
-@media only screen and (max-width: 1200px) {
-  header {
-    height: 280px;
-  }
-  .marquee-wrapper {
-    margin-top: 190px;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  header {
-    height: 250px;
-  }
-  .marquee-wrapper {
-    margin-top: 160px;
-  }
-}
-@media only screen and (max-width: 991px) {
-	nav {
-    background-color: transparent !important;
-  }
-  header {
-    height: 220px;
-  }
-  .marquee-wrapper {
-    margin-top: 130px;
-  }
-
-  .nav-link {
-    padding: 2px !important;
-    font-size: 14px;
-    width: 120px;
-    text-align: center;
-    background-color: $white !important;
-    color: $grey !important;
-  }
-
-  .navbar-toggler {
-    margin-bottom: 8px !important;
-    width: 120px;
-    background-color: $lightBlue !important;
-    color: $white !important;
-  }
-
-}
-
-@media only screen and (max-width: 768px) {
-  header {
-    height: 185px;
-  }
-  .marquee-wrapper {
-    margin-top: 82px;
-  }
-  .fc-daygrid-more-link, .fc-daygrid-day-number {
-    font-size: 10px;
-  }
-  .modal-button {
-    width: 110px;
-    font-size: 13px;
-  }
-
-}
-@media only screen and (max-width: 670px) {
-  #local-events-h2 {
-    font-size: 20px !important;
-    padding: 30px 0 20px 0;
-    
-  }
-  .fc {
-    height: 550px;
-  }
-  .fc-toolbar-title{
-    font-size: 12px !important;
-  }
-  .fc-header-toolbar {
-    margin-bottom: 10px !important;
-  }
-  .fc-today-button, .fc-prev-button, .fc-next-button{
-    height: 24px;
-    font-size: 10px !important;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .header {
-    font-size: 24px !important;
-    width: 50%;
-    margin-right: 0 !important;
-  }
-  .and {
-    font-size: 38px !important;
-  }
-  label, .inputLogin {
-    font-size: 16px;
-  }
-  .inputLogin, .loginBtn {
-    width: 180px;
-  }
-
-  .fc-dayGridMonth-button, .fc-timeGridWeek-button , .fc-timeGridDay-button {
-    width: 50px;
-    font-size: 10px !important;
-  }
-  .modal-button {
-    width: 80px;
-    height: 40px;
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .inputLogin, .loginBtn {
-    width: 140px;
-  }
+  height: 50px !important;
+  background-color: $pink !important;
 
 }
 
@@ -531,7 +416,7 @@ nav {
 .demo-app-sidebar {
   width: 100%;
   line-height: 1.5;
-  margin: 50px 10px 100px 10px;
+  margin: 50px 0px 100px 0px;
 }
 
 .demo-app-sidebar-section {
@@ -550,6 +435,10 @@ nav {
 
 
 // // // // MODAL // // // // 
+
+#modal-center {
+  text-align: center;
+}
 
 .modal-cover {
   position: fixed;
@@ -635,11 +524,6 @@ nav {
 #checkbox, li::marker {
   margin-right: 5px;
 }
-
-
-
-
-
 
 
 // // // // MEDIA QUERIES // // // // 
@@ -749,9 +633,10 @@ nav {
 
   .modal-button {
     width: 80px;
-    height: 40px;
+    height: 40px !important;
     font-size: 10px;
   }
+
   /* Center the Modal! */
   .modal-area {
     left: 50%;
