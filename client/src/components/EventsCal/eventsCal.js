@@ -80,7 +80,7 @@ export default class EventCalendar extends Component {
             selectMirror={true}
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
-            initialEvents={ this.state.currentEvents.length ? this.state.currentEvents :
+            events={ this.state.currentEvents.length ? this.state.currentEvents :
               [
                 {
                   title: "Food Drive",
