@@ -21,20 +21,26 @@ export default class EventCalendar extends Component {
   loadEvents = () => {
     API.getEvents()
       .then(res => {
-        this.state.currentEvents = res.data
+        const filtered = res.data.map(item => {
+          delete item.volunteersNeeded
+          delete item.date
+          return item
+        })
+        console.log(filtered)
+        this.setState({
+          currentEvents: filtered
+        })
         console.log(res.data[0].title)
         console.log(res.data)
       }
       )
       .catch(err => console.log(err))
   };
-  componentDidMount() {
+ 
+   componentDidMount() {
     console.log("Component Mounted")
-    console.log(API_EVENTS)
+    console.log(INITIAL_EVENTS)
     this.loadEvents();
-    this.state.currentEvents = this.loadEvents();
-    console.log(this.loadEvents())
-    console.log(this.state.currentEvents)
   
   }
 
@@ -74,12 +80,12 @@ export default class EventCalendar extends Component {
             selectMirror={true}
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
-            initialEvents={API_EVENTS} // alternatively, use the `events` setting to fetch from a feed
-            events={this.loadEvents}
-            select={this.handleDateSelect}
+            initialEvents={ this.state.currentEvents.length ? this.state.currentEvents : null }
+            // events={ INITIAL_EVENTS } // alternatively, use the `events` setting to fetch from a feed
+            // select={this.handleDateSelect}
             eventContent={renderEventContent} // custom render function
-            eventClick={this.handleEventClick}
-            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            // eventClick={this.handleEventClick}
+            eventsSet={this.state.currentEvents} // called after events are initialized/added/changed/removed
             /* you can update a remote database when these fire:
             eventAdd={function(){}}
             eventChange={function(){}}
@@ -88,8 +94,12 @@ export default class EventCalendar extends Component {
           />
         </div>
         </div>
+        <div>
+  
+      </div>
         </Col>
       </Row>
+      
       
     )
   }
@@ -132,35 +142,35 @@ export default class EventCalendar extends Component {
     })
   }
 
-  handleDateSelect = (selectInfo) => {
-    let title = prompt('Please enter a new title for your event')
-    let calendarApi = selectInfo.view.calendar
+  // handleDateSelect = (selectInfo) => {
+  //   let title = prompt('Please enter a new title for your event')
+  //   let calendarApi = selectInfo.view.calendar
 
-    calendarApi.unselect() // clear date selection
+  //   calendarApi.unselect() // clear date selection
 
-    if (title) {
-      calendarApi.addEvent({
-        id: createEventId(),
-        title,
-        start: selectInfo.startStr,
-        end: selectInfo.endStr,
-        allDay: selectInfo.allDay
-      })
-    }
-  }
+  //   if (title) {
+  //     calendarApi.addEvent({
+  //       id: createEventId(),
+  //       title,
+  //       start: selectInfo.startStr,
+  //       end: selectInfo.endStr,
+  //       allDay: selectInfo.allDay
+  //     })
+  //   }
+  // }
 
-  handleEventClick = (clickInfo) => {
-    if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove()
-    }
-  }
+  // handleEventClick = (clickInfo) => {
+  //   if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+  //     clickInfo.event.remove()
+  //   }
+  // }
 
-  handleEvents = (events) => {
-    this.loadEvents();
-    this.setState({
-      currentEvents: events
-    })
-  }
+  // handleEvents = (events) => {
+   
+  //   this.setState({
+  //     currentEvents: events
+  //   })
+  // }
 
 }
 

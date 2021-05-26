@@ -8,7 +8,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findAll: function(req, res) {
-    db.Events.find({})
+    db.Events.find({}).sort({ date: 1 })
       .then(dbModel => res.status(200).json(dbModel))
       .catch(err => res.status(422).json(err));
   },

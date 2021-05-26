@@ -26,6 +26,13 @@ export const INITIAL_EVENTS = [
     id: createEventId(),
     title: 'Timed event',
     start: todayStr + 'T12:00:00'
+  },
+  {
+    title: "Food Drive",
+    date: "2021-05-28",
+    start: "2021-05-28T09:00:00",
+    end: "2021-05-28T11:00:00",
+    volunteersNeeded: 12,
   }
 ]
 
