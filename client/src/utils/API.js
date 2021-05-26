@@ -18,6 +18,14 @@ export default {
   loginOrg: function (userData) {
     return axios.post("/loginorg", userData);
   },
+
+  getEvents: function() {
+    return axios.get("/api/calendar")
+  },
+  saveEvent: function(eventData) {
+    return axios.post("/api/calendar", eventData);
+  }
+};
   // getData:() =>
   // axios({
   //     'method':'GET',
@@ -28,4 +36,3 @@ export default {
   // }
 
   // )
-};
