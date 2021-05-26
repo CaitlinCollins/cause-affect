@@ -4,7 +4,7 @@ import FullCalendar, { formatDate } from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId } from '../../utils/Events'
+import { INITIAL_EVENTS, createEventId, API_EVENTS } from '../../utils/Events'
 import Modal from '../Modal'
 import "../../App.scss";
 import API from "../../utils/API";
@@ -17,19 +17,25 @@ export default class EventCalendar extends Component {
     weekendsVisible: true,
     currentEvents: []
   }
-
+  
   loadEvents = () => {
     API.getEvents()
       .then(res => {
         this.state.currentEvents = res.data
+        console.log(res.data[0].title)
         console.log(res.data)
       }
       )
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   };
   componentDidMount() {
     console.log("Component Mounted")
+    console.log(API_EVENTS)
     this.loadEvents();
+    this.state.currentEvents = this.loadEvents();
+    console.log(this.loadEvents())
+    console.log(this.state.currentEvents)
+  
   }
 
   render() {
@@ -68,7 +74,8 @@ export default class EventCalendar extends Component {
             selectMirror={true}
             dayMaxEvents={true}
             weekends={this.state.weekendsVisible}
-            initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            initialEvents={API_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            events={this.loadEvents}
             select={this.handleDateSelect}
             eventContent={renderEventContent} // custom render function
             eventClick={this.handleEventClick}
@@ -149,6 +156,7 @@ export default class EventCalendar extends Component {
   }
 
   handleEvents = (events) => {
+    this.loadEvents();
     this.setState({
       currentEvents: events
     })

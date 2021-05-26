@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 
-  //   eventName:
-  //   eventDate:
-  //   eventTime: 
+  //   title:
+  //   start:
+  //   end: 
   //   volunteersNeeded:
   function FormContent() {
 
@@ -31,12 +31,15 @@ import API from "../../utils/API";
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.eventName && formObject.eventDate) {
-      console.log(formObject)
+    if (formObject.title) {
+      let dateStrStart = formObject.date + 'T' + formObject.start + ':00'
+      let dateStrEnd = formObject.date + 'T' + formObject.end + ':00'
+      console.log(dateStrStart, dateStrEnd);
       API.saveEvent({
-        eventName: formObject.eventName,
-        eventDate: formObject.eventDate,
-        eventTime: formObject.eventTime,
+        title: formObject.title,
+        date: formObject.date,
+        start: dateStrStart,
+        end: dateStrEnd,
         volunteersNeeded: formObject.volunteersNeeded
       })
         .then(res => window.location.reload())
@@ -49,32 +52,34 @@ import API from "../../utils/API";
         <h1>New Event</h1>
       <div className="form-group">
         <label htmlFor="Title">Event Title</label>
-        <input className="form-control" id="event-title" name="eventName" onChange={handleInputChange} />
+        <input className="form-control" id="event-title" name="title" onChange={handleInputChange} />
       </div>
       <div className="form-group">
         <label htmlFor="Start Date">Date</label>
-        <input type="date" className="form-control" name="eventDate" onChange={handleInputChange} />
+        <input type="date" className="form-control" name="date" onChange={handleInputChange} />
         </div>
       <div className="form-group">
         <label htmlFor="Start Time">Start Time</label>
         <input
           type="time"
-          name="eventTime"
+          name="start"
           className="form-control"
           id="end-time"
           placeholder="10:00am"
           onChange={handleInputChange}
         />
       </div>
-      {/* <div className="form-group">
+      <div className="form-group">
         <label htmlFor="End Time">End Time</label>
         <input
           type="time"
+          name="end"
           className="form-control"
           id="end-time"
           placeholder="2:00pm"
+          onChange={handleInputChange}
         />
-      </div> */}
+      </div>
       <div className="form-group">
         <label htmlFor="Start Time">Volunteers Needed</label>
         <input
