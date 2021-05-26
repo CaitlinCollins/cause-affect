@@ -33,9 +33,11 @@ export default class EventCalendar extends Component {
           </div>
         </Col>
         <Col size="lg-9 md-12">
-        <div className='demo-app-main card' id="calendar-card">
-            <h2 id="local-events-h2">Local Events</h2>
-            <Modal triggerText={triggerText} onSubmit={onSubmit} />
+          <div className='demo-app-main card' id="calendar-card">
+              <h2 id="local-events-h2">Local Events</h2>
+              <div id="modal-center">
+                <Modal triggerText={triggerText} onSubmit={onSubmit} />
+              </div>
           <div id="calendar">
 
           <FullCalendar
