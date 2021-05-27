@@ -48,17 +48,17 @@ import API from "../../utils/API";
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-        <h1>New Event</h1>
-      <div className="form-group">
+    <form onSubmit={onSubmit}>
+        <h1 id="new-event">New Event</h1>
+      <div className="form-group modal-group">
         <label htmlFor="Title">Event Title</label>
         <input className="form-control" id="event-title" name="title" onChange={handleInputChange} />
       </div>
-      <div className="form-group">
+      <div className="form-group modal-group">
         <label htmlFor="Start Date">Date</label>
         <input type="date" className="form-control" name="date" onChange={handleInputChange} />
         </div>
-      <div className="form-group">
+      <div className="form-group modal-group">
         <label htmlFor="Start Time">Start Time</label>
         <input
           type="time"
@@ -69,7 +69,7 @@ import API from "../../utils/API";
           onChange={handleInputChange}
         />
       </div>
-      <div className="form-group">
+      <div className="form-group modal-group">
         <label htmlFor="End Time">End Time</label>
         <input
           type="time"
@@ -91,8 +91,8 @@ import API from "../../utils/API";
           onChange={handleInputChange}
         />
       </div><br />
-      <div className="form-group">
-        <button className="form-control btn btn-primary" type="submit">
+      <div className="form-group modal-group">
+        <button className="form-control btn btn-primary" id="modal-btn" type="submit">
           Submit
         </button>
       </div>
