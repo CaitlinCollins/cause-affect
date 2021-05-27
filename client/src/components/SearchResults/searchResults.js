@@ -29,12 +29,14 @@ const SearchResults = ({ city, state, cause }) => {
 
     if (error) return (
       <div className="error">
-        <h1>No Results Found</h1>
-        <p>No results were found for your search. Make sure you put in a correct city, and that your state input was a 2-letter state abbreviation, and please try again. 
+        <h2>No Results Found</h2>
+        <p id = "no-results">No results were found for your search. Make sure you put in a correct city, and that your state input was a 2-letter state abbreviation, and please try again. 
         </p>
+        <div className = "text-center">
         <button className="modal-button">
-            <a title = "Search" href="/search">Try again</a>
+            <a className = "donate-link" title = "Search" href="/search">Try again</a>
         </button>
+        </div>
       </div>
     )
     

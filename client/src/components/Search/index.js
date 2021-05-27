@@ -28,7 +28,7 @@ const SearchFunction = () => {
 
     
     // both location and interest are submitted, setDisplay out here to have access to vars and pass as props
-    if (num == 1) {
+    if (num === 1) {
       setNum(2)
       setDisplay(<SearchResults city = { city } state = { state } cause = { cause } />)
       console.log(city)

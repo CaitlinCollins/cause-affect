@@ -1,4 +1,3 @@
-import { set } from "mongoose";
 import React from "react";
 import Causes from "../Causes/causes";
 import { Row, Col } from "../Grid/grid";
@@ -32,7 +31,7 @@ const UserInput = ({ handleSubmit }) => {
             causeId: "3"
         },
         {
-            title: "Human Services",
+            title: "Humanities",
             img: "home",
             causeId: "6"
         },

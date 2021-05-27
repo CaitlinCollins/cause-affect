@@ -174,9 +174,14 @@ h2 {
  
 }
 
-#volunteer-link, #donate-link {
+#volunteer-link, .donate-link {
   text-decoration: none !important;
   color: $white;
+}
+
+#no-results {
+  text-align: center;
+  font-family: $mainFont
 }
 
 
