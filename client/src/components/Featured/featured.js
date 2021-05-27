@@ -22,7 +22,7 @@ function Featured() {
                     <a id="volunteer-link" href="https://www.tcstmn.org/" target="_blank">Volunteer Now!</a>
                 </button>
                 <button id="donate-btn">
-                    <a id="donate-link" href="https://www.tcstmn.org/donate" target="_blank">Make a Donation!</a>
+                    <a className="donate-link" href="https://www.tcstmn.org/donate" target="_blank">Make a Donation!</a>
                 </button>
             </div>
         </div>

@@ -10,15 +10,15 @@ const Result = ({ charity }) => {
                     <div className="card" id="charity-card">
                         <h4 className="charity-title">
                             <a 
-                            className="charity-link" href={charity.websiteURL} target="_blank"> {charity.charityName}</a>
+                            className="charity-link" href={charity.websiteURL} target="_blank" rel="noreferrer"> {charity.charityName}</a>
                         </h4>
                         <p className="charity-mission">{charity.mission}</p>
                         <div className="btn-center">
                         <button id="org-volunteer">
-                            <a id="volunteer-link" href={charity.websiteURL} target="_blank">Volunteer Now!</a>
+                            <a id="volunteer-link" href={charity.websiteURL} target="_blank" rel="noreferrer">Volunteer Now!</a>
                         </button>
                         <button id="org-donate">
-                            <a id="donate-link" href={charity.websiteURL} target="_blank">Make a Donation!</a>
+                            <a className="donate-link" href={charity.websiteURL} target="_blank" rel="noreferrer">Make a Donation!</a>
                         </button>
                     </div>
                     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FormContent } from '../FormContent';
+import FormContent from '../FormContent';
 import FocusTrap from 'focus-trap-react';
 export const FormModal = ({
   onClickOutside,

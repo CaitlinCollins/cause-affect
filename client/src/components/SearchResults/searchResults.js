@@ -29,18 +29,24 @@ const SearchResults = ({ city, state, cause }) => {
 
     if (error) return (
       <div className="error">
-        <h1>{error}</h1>
-        <p>Looks like there was an invalid input. Make sure you put in a correct city, and that your state input was a 2-letter state abbreviation.
+        <h2>No Results Found</h2>
+        <p id = "no-results">No results were found for your search. Make sure you put in a correct city, and that your state input was a 2-letter state abbreviation, and please try again. 
         </p>
+        <div className = "text-center">
+        <button className="modal-button">
+            <a className = "donate-link" title = "Search" href="/search">Try again</a>
+        </button>
+        </div>
       </div>
     )
     
     if (!items) {
-      console.log(cause);
+
       return (
         <div>Loading...</div>
       )
     }
+
     return (
        <div className="index">
         <h2 id="results-h2">

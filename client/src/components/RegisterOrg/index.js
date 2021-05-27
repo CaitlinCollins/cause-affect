@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "../Grid/grid";
 import API from "../../utils/API";
 import "../../App.scss";
-import Modal from "../Modal";
 import RegisterOrgBtn from "../RegisterOrgBtn";
 import { useHistory } from "react-router-dom";
 // register an organization

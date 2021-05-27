@@ -15,8 +15,6 @@ $fancyFont: 'Special Elite', cursive;
 
 $boxShadow: 0 4px 8px 0 $shadow1, 0 6px 20px 0 $shadow2 !important;
 
-
-
 // // // // APP // // // // 
 #root {
   background-color: $lightBlue;
@@ -176,9 +174,14 @@ h2 {
  
 }
 
-#volunteer-link, #donate-link {
+#volunteer-link, .donate-link {
   text-decoration: none !important;
   color: $white !important;
+}
+
+#no-results {
+  text-align: center;
+  font-family: $mainFont
 }
 
 
@@ -558,7 +561,6 @@ nav {
 #checkbox, li::marker {
   margin-right: 5px;
 }
-
 
 // // // // MEDIA QUERIES // // // // 
 
