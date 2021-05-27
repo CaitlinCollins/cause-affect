@@ -48,7 +48,7 @@ import API from "../../utils/API";
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleFormSubmit}>
         <h1 id="new-event">New Event</h1>
       <div className="form-group modal-group">
         <label htmlFor="Title">Event Title</label>
